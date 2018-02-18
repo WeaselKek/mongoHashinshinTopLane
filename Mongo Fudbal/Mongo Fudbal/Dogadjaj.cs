@@ -15,7 +15,7 @@ namespace Mongo_Fudbal
         public ObjectId Id { get; set; }
         public int Minut { get; set; }
         public string Tip { get; set; }
-        public MongoDBRef Utamkica { get; set; }
+        public MongoDBRef Utakmica { get; set; }
         public MongoDBRef Igrac { get; set; }
 
 

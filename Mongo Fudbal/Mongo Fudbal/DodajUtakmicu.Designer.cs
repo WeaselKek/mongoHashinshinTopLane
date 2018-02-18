@@ -175,6 +175,7 @@
             this.Name = "DodajUtakmicu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DodajUtakmicu";
+            this.Load += new System.EventHandler(this.DodajUtakmicu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

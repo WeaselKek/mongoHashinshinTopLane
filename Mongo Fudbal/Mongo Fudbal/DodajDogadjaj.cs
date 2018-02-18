@@ -17,6 +17,9 @@ namespace Mongo_Fudbal
 {
     public partial class DodajDogadjaj : Form
     {
+
+        public Utakmica U { get; set; }
+
         public DodajDogadjaj()
         {
             InitializeComponent();

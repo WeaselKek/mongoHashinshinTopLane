@@ -137,6 +137,7 @@
             this.Controls.Add(this.txtGrad);
             this.Controls.Add(this.txtNaziv);
             this.Name = "DodajKlub";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DodajKlub";
             this.ResumeLayout(false);
             this.PerformLayout();

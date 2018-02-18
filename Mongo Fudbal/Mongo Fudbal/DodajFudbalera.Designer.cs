@@ -1,6 +1,6 @@
 ﻿namespace Mongo_Fudbal
 {
-    partial class FormFudbaler
+    partial class DodajFudbalera
     {
         /// <summary>
         /// Required designer variable.

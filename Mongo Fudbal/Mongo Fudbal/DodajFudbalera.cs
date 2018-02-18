@@ -15,9 +15,9 @@ using MongoDB.Driver.Linq;
 
 namespace Mongo_Fudbal
 {
-    public partial class FormFudbaler : Form
+    public partial class DodajFudbalera : Form
     {
-        public FormFudbaler()
+        public DodajFudbalera()
         {
             InitializeComponent();
         }

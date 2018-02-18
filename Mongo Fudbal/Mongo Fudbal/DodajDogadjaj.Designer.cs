@@ -40,33 +40,41 @@
             // 
             // txtMinut
             // 
-            this.txtMinut.Location = new System.Drawing.Point(56, 107);
+            this.txtMinut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMinut.Location = new System.Drawing.Point(135, 140);
+            this.txtMinut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMinut.Name = "txtMinut";
-            this.txtMinut.Size = new System.Drawing.Size(73, 20);
+            this.txtMinut.Size = new System.Drawing.Size(96, 28);
             this.txtMinut.TabIndex = 0;
             // 
             // cbxIgrac
             // 
+            this.cbxIgrac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxIgrac.FormattingEnabled = true;
-            this.cbxIgrac.Location = new System.Drawing.Point(247, 106);
+            this.cbxIgrac.Location = new System.Drawing.Point(330, 140);
+            this.cbxIgrac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxIgrac.Name = "cbxIgrac";
-            this.cbxIgrac.Size = new System.Drawing.Size(144, 21);
+            this.cbxIgrac.Size = new System.Drawing.Size(191, 30);
             this.cbxIgrac.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(256, 90);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(326, 112);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(51, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Igrac";
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(440, 357);
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(478, 382);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(100, 41);
             this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -74,9 +82,11 @@
             // 
             // btnTrue
             // 
-            this.btnTrue.Location = new System.Drawing.Point(38, 357);
+            this.btnTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrue.Location = new System.Drawing.Point(88, 382);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTrue.Name = "btnTrue";
-            this.btnTrue.Size = new System.Drawing.Size(75, 23);
+            this.btnTrue.Size = new System.Drawing.Size(100, 40);
             this.btnTrue.TabIndex = 3;
             this.btnTrue.Text = "Accept";
             this.btnTrue.UseVisualStyleBackColor = true;
@@ -85,39 +95,45 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 91);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(131, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
+            this.label2.Size = new System.Drawing.Size(56, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Minut";
             // 
             // cbxTip
             // 
+            this.cbxTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTip.FormattingEnabled = true;
             this.cbxTip.Items.AddRange(new object[] {
             "Goal",
             "Autogoal",
             "Red Card",
             "Yellow Card"});
-            this.cbxTip.Location = new System.Drawing.Point(155, 217);
+            this.cbxTip.Location = new System.Drawing.Point(135, 223);
+            this.cbxTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxTip.Name = "cbxTip";
-            this.cbxTip.Size = new System.Drawing.Size(163, 21);
+            this.cbxTip.Size = new System.Drawing.Size(216, 30);
             this.cbxTip.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(152, 201);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(132, 195);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 13);
+            this.label3.Size = new System.Drawing.Size(37, 24);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tip";
             // 
             // DodajDogadjaj
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(548, 406);
+            this.ClientSize = new System.Drawing.Size(639, 478);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxTip);
             this.Controls.Add(this.label2);
@@ -126,7 +142,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxIgrac);
             this.Controls.Add(this.txtMinut);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DodajDogadjaj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DodajDogadjaj";
             this.ResumeLayout(false);
             this.PerformLayout();

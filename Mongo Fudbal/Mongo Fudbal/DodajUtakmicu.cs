@@ -47,13 +47,29 @@ namespace Mongo_Fudbal
             MongoDBRef pom2 = new MongoDBRef("klubovi", away.Id);
             MongoDBRef liga1 = new MongoDBRef("lige", L.Id);
 
-            Utakmica ut = new Utakmica { Datum = dtp1.Value, Rezultat = golH + ":" + golA, Klub1 = pom1, Klub2 = pom2, Liga = liga1 };
+            Utakmica ut = new Utakmica { Datum = dtp1.Value, Rezultat = golH.Text + ":" + golA.Text, Klub1 = pom1, Klub2 = pom2, Liga = liga1 };
             utakmiceColl.Insert(ut);
 
             L.Utakmice.Add(new MongoDBRef("utakmice", ut.Id));
             ligeColl.Save(L);
 
             this.Close();
+        }
+
+        private void DodajUtakmicu_Load(object sender, EventArgs e)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
+            List<String> listak = new List<String>();
+
+            foreach (MongoDBRef klubRef in L.Klubovi.ToList())
+            {
+                Klub klub = db.FetchDBRefAs<Klub>(klubRef);
+                cbxH.Items.Add(klub.Ime);
+                cbxA.Items.Add(klub.Ime);
+            }          
         }
     }
 }

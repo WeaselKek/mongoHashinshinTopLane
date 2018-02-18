@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNazivLige = new System.Windows.Forms.Label();
             this.tabLiga = new System.Windows.Forms.TabControl();
             this.tabUtakmice = new System.Windows.Forms.TabPage();
             this.dataGridViewUtakmice = new System.Windows.Forms.DataGridView();
             this.btnDodajUtakmicu = new System.Windows.Forms.Button();
             this.tabTabela = new System.Windows.Forms.TabPage();
+            this.btnIzaberiKlub = new System.Windows.Forms.Button();
             this.dataGridViewTabela = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dodajKlubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnIzaberiUtakmicu = new System.Windows.Forms.Button();
             this.tabLiga.SuspendLayout();
             this.tabUtakmice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtakmice)).BeginInit();
@@ -73,6 +75,7 @@
             // 
             // tabUtakmice
             // 
+            this.tabUtakmice.Controls.Add(this.btnIzaberiUtakmicu);
             this.tabUtakmice.Controls.Add(this.dataGridViewUtakmice);
             this.tabUtakmice.Controls.Add(this.btnDodajUtakmicu);
             this.tabUtakmice.Location = new System.Drawing.Point(4, 29);
@@ -87,20 +90,19 @@
             // 
             this.dataGridViewUtakmice.AllowUserToAddRows = false;
             this.dataGridViewUtakmice.AllowUserToDeleteRows = false;
-            this.dataGridViewUtakmice.AllowUserToResizeColumns = false;
             this.dataGridViewUtakmice.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewUtakmice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewUtakmice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUtakmice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUtakmice.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUtakmice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUtakmice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUtakmice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUtakmice.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridViewUtakmice.Location = new System.Drawing.Point(6, 6);
@@ -126,6 +128,7 @@
             // 
             // tabTabela
             // 
+            this.tabTabela.Controls.Add(this.btnIzaberiKlub);
             this.tabTabela.Controls.Add(this.dataGridViewTabela);
             this.tabTabela.Location = new System.Drawing.Point(4, 29);
             this.tabTabela.Name = "tabTabela";
@@ -135,35 +138,42 @@
             this.tabTabela.Text = "Tabela";
             this.tabTabela.UseVisualStyleBackColor = true;
             // 
+            // btnIzaberiKlub
+            // 
+            this.btnIzaberiKlub.Location = new System.Drawing.Point(269, 389);
+            this.btnIzaberiKlub.Name = "btnIzaberiKlub";
+            this.btnIzaberiKlub.Size = new System.Drawing.Size(180, 35);
+            this.btnIzaberiKlub.TabIndex = 5;
+            this.btnIzaberiKlub.Text = "Izaberi klub";
+            this.btnIzaberiKlub.UseVisualStyleBackColor = true;
+            // 
             // dataGridViewTabela
             // 
             this.dataGridViewTabela.AllowUserToAddRows = false;
             this.dataGridViewTabela.AllowUserToDeleteRows = false;
-            this.dataGridViewTabela.AllowUserToResizeColumns = false;
             this.dataGridViewTabela.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTabela.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTabela.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTabela.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTabela.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTabela.Cursor = System.Windows.Forms.Cursors.Default;
             this.dataGridViewTabela.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewTabela.MultiSelect = false;
             this.dataGridViewTabela.Name = "dataGridViewTabela";
             this.dataGridViewTabela.ReadOnly = true;
-            this.dataGridViewTabela.RowHeadersVisible = false;
             this.dataGridViewTabela.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewTabela.RowTemplate.Height = 28;
             this.dataGridViewTabela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTabela.Size = new System.Drawing.Size(730, 433);
+            this.dataGridViewTabela.Size = new System.Drawing.Size(730, 364);
             this.dataGridViewTabela.TabIndex = 4;
             // 
             // menuStrip1
@@ -183,6 +193,16 @@
             this.dodajKlubToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.dodajKlubToolStripMenuItem.Text = "Dodaj klub";
             this.dodajKlubToolStripMenuItem.Click += new System.EventHandler(this.dodajKlubToolStripMenuItem_Click);
+            // 
+            // btnIzaberiUtakmicu
+            // 
+            this.btnIzaberiUtakmicu.Location = new System.Drawing.Point(217, 388);
+            this.btnIzaberiUtakmicu.Name = "btnIzaberiUtakmicu";
+            this.btnIzaberiUtakmicu.Size = new System.Drawing.Size(180, 35);
+            this.btnIzaberiUtakmicu.TabIndex = 4;
+            this.btnIzaberiUtakmicu.Text = "Izaberi utakmicu";
+            this.btnIzaberiUtakmicu.UseVisualStyleBackColor = true;
+            this.btnIzaberiUtakmicu.Click += new System.EventHandler(this.btnIzaberiUtakmicu_Click);
             // 
             // FormLiga
             // 
@@ -220,5 +240,7 @@
         private System.Windows.Forms.DataGridView dataGridViewTabela;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem dodajKlubToolStripMenuItem;
+        private System.Windows.Forms.Button btnIzaberiKlub;
+        private System.Windows.Forms.Button btnIzaberiUtakmicu;
     }
 }
