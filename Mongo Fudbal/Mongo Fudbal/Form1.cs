@@ -19,14 +19,24 @@ namespace Mongo_Fudbal
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ucitajDGV()
         {
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
 
-            //db.CreateCollection("preduzece");
+            var collection = db.GetCollection<Liga>("lige");
 
+            List<Liga> lista = new List<Liga>(collection.FindAll());
+            dataGridView1.DataSource = lista;
+            dataGridView1.Columns["id"].Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
             var collection = db.GetCollection<Liga>("lige");
 
             Liga jsl = new Liga { Ime = "Srpska liga", Drzava = "Srbija"};
@@ -39,6 +49,28 @@ namespace Mongo_Fudbal
             {
                 MessageBox.Show(lg.Ime);
             }
+        }
+
+        private void dodajToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DodajLigu dlform = new DodajLigu();
+            dlform.ShowDialog();
+            ucitajDGV();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ucitajDGV();
+        }
+
+
+        private void btnIzaberi_Click(object sender, EventArgs e)
+        {
+            string id = dataGridView1.SelectedRows[0].Cells["id"].Value.ToString();
+            FormLiga lform = new FormLiga();
+            lform.ShowDialog();
+            ucitajDGV();
+
         }
     }
 }
