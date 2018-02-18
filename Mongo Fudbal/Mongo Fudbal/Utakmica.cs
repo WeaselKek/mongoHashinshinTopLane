@@ -10,7 +10,7 @@ using MongoDB.Driver;
 
 namespace Mongo_Fudbal
 {
-    class Utakmica
+    public class Utakmica
     {
         public ObjectId Id { get; set; }
         public DateTime Datum { get; set; }

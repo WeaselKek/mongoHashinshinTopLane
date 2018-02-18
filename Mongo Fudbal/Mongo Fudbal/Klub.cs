@@ -10,7 +10,7 @@ using MongoDB.Driver;
 
 namespace Mongo_Fudbal
 {
-    class Klub
+    public class Klub
     {
         public ObjectId Id { get; set; }
         public string Ime { get; set; }

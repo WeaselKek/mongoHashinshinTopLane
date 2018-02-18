@@ -10,7 +10,7 @@ using MongoDB.Driver;
 
 namespace Mongo_Fudbal
 {
-    class Dogadjaj
+    public class Dogadjaj
     {
         public ObjectId Id { get; set; }
         public int Minut { get; set; }

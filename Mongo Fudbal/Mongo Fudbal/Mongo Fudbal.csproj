@@ -58,6 +58,12 @@
     <Compile Include="DodajDogadjaj.Designer.cs">
       <DependentUpon>DodajDogadjaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="DodajKlub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajKlub.Designer.cs">
+      <DependentUpon>DodajKlub.cs</DependentUpon>
+    </Compile>
     <Compile Include="DodajLigu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +83,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFudbaler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFudbaler.Designer.cs">
+      <DependentUpon>FormFudbaler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKlub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKlub.Designer.cs">
+      <DependentUpon>FormKlub.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLiga.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLiga.Designer.cs">
       <DependentUpon>FormLiga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtakmica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtakmica.Designer.cs">
+      <DependentUpon>FormUtakmica.cs</DependentUpon>
     </Compile>
     <Compile Include="Fudbaler.cs" />
     <Compile Include="Klub.cs" />
@@ -91,6 +115,9 @@
     <Compile Include="Utakmica.cs" />
     <EmbeddedResource Include="DodajDogadjaj.resx">
       <DependentUpon>DodajDogadjaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajKlub.resx">
+      <DependentUpon>DodajKlub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DodajLigu.resx">
       <DependentUpon>DodajLigu.cs</DependentUpon>

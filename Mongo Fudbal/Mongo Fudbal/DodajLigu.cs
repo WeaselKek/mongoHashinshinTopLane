@@ -43,12 +43,6 @@ namespace Mongo_Fudbal
 
             collection.Insert(liga);
 
-
-            foreach (Liga lg in collection.FindAll())
-            {
-                MessageBox.Show(lg.Ime);
-            }
-
             this.Close();
         }
     }

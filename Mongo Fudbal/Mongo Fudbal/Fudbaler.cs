@@ -9,7 +9,7 @@ using MongoDB.Driver;
 
 namespace Mongo_Fudbal
 {
-    class Fudbaler
+    public class Fudbaler
     {
 
         public ObjectId Id { get; set; }

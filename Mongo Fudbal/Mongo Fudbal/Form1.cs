@@ -66,8 +66,9 @@ namespace Mongo_Fudbal
 
         private void btnIzaberi_Click(object sender, EventArgs e)
         {
-            string id = dataGridView1.SelectedRows[0].Cells["id"].Value.ToString();
+            Liga l = dataGridView1.CurrentRow.DataBoundItem as Liga;
             FormLiga lform = new FormLiga();
+            lform.L = l;
             lform.ShowDialog();
             ucitajDGV();
 

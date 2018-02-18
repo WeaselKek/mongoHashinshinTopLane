@@ -18,6 +18,8 @@ namespace Mongo_Fudbal
 {
     public partial class DodajUtakmicu : Form
     {
+        public Liga L { get; set; }
+
         public DodajUtakmicu()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace Mongo_Fudbal
 
             var utakmiceColl = db.GetCollection<Utakmica>("utakmice");
             var kluboviColl = db.GetCollection<Klub>("klubovi");
+            var ligeColl = db.GetCollection<Liga>("lige");
 
             Klub home = (from klubovi in kluboviColl.AsQueryable<Klub>()
                          where klubovi.Ime == cbxH.Text
@@ -41,12 +44,15 @@ namespace Mongo_Fudbal
                          select klubovi).Single();
 
             MongoDBRef pom1 = new MongoDBRef("klubovi", home.Id);
-            MongoDBRef pom2 = new MongoDBRef("klubovi", home.Id);
+            MongoDBRef pom2 = new MongoDBRef("klubovi", away.Id);
+            MongoDBRef liga1 = new MongoDBRef("lige", L.Id);
 
-            Utakmica ut = new Utakmica { Datum = dtp1.Value, Rezultat = golH + ":" + golA, Klub1 = pom1, Klub2 = pom2 };
-
-
+            Utakmica ut = new Utakmica { Datum = dtp1.Value, Rezultat = golH + ":" + golA, Klub1 = pom1, Klub2 = pom2, Liga = liga1 };
             utakmiceColl.Insert(ut);
+
+            L.Utakmice.Add(new MongoDBRef("utakmice", ut.Id));
+            ligeColl.Save(L);
+
             this.Close();
         }
     }
