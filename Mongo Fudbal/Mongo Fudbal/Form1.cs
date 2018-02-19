@@ -108,5 +108,18 @@ namespace Mongo_Fudbal
                 ucitajDGV();
             }
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (!Provera.chkIfSelected(dataGridView1))
+                return;
+
+            Liga l = dataGridView1.CurrentRow.DataBoundItem as Liga;
+
+            DodajLigu lform = new DodajLigu();
+            lform.UpdateItem = l;
+            lform.ShowDialog();
+            ucitajDGV();
+        }
     }
 }

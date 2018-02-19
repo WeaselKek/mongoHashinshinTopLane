@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnIzaberi = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -115,9 +116,9 @@
             this.btnIzaberi.BackColor = System.Drawing.Color.White;
             this.btnIzaberi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIzaberi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzaberi.Location = new System.Drawing.Point(249, 557);
+            this.btnIzaberi.Location = new System.Drawing.Point(360, 557);
             this.btnIzaberi.Name = "btnIzaberi";
-            this.btnIzaberi.Size = new System.Drawing.Size(418, 45);
+            this.btnIzaberi.Size = new System.Drawing.Size(307, 45);
             this.btnIzaberi.TabIndex = 4;
             this.btnIzaberi.Text = "Izaberi ligu";
             this.btnIzaberi.UseVisualStyleBackColor = false;
@@ -138,12 +139,25 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(249, 557);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(105, 45);
+            this.btnUpdate.TabIndex = 6;
+            this.btnUpdate.Text = "Azuriraj";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(988, 617);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnIzaberi);
             this.Controls.Add(this.label1);
@@ -173,6 +187,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIzaberi;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }
 

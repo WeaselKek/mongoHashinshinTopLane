@@ -17,6 +17,13 @@ namespace Mongo_Fudbal
 {
     public partial class DodajLigu : Form
     {
+        private bool updaterino = false;
+
+        public Liga UpdateItem
+        {
+            get;
+            set;
+        }
         public DodajLigu()
         {
             InitializeComponent();
@@ -24,6 +31,12 @@ namespace Mongo_Fudbal
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (UpdateItem != null)
+            {            
+                Update();
+                return;
+            }
+
             //validacija
             if ((txtNaziv.Text == "") || (txtDrzava.Text == ""))
             {
@@ -51,6 +64,39 @@ namespace Mongo_Fudbal
             collection.Insert(liga);
 
             this.Close();
+        }
+        private void Update()
+        {
+
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
+            var collection = db.GetCollection<Liga>("lige");
+
+            
+
+            var query = Query.EQ("_id", UpdateItem.Id);
+            Liga lg = collection.Find(query).Single();
+
+
+
+
+            lg.Ime = txtNaziv.Text;
+            lg.Drzava = txtDrzava.Text;
+
+            collection.Save(lg);
+            this.Close();
+        }
+
+        private void DodajLigu_Load(object sender, EventArgs e)
+        {
+            if (UpdateItem != null)
+            {
+                btnTrue.Text = "Azuriraj";
+                txtNaziv.Text = UpdateItem.Ime;
+                txtDrzava.Text = UpdateItem.Drzava;
+            }
         }
     }
 }
