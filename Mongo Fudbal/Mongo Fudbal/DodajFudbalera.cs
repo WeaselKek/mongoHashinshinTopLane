@@ -17,6 +17,7 @@ namespace Mongo_Fudbal
 {
     public partial class DodajFudbalera : Form
     {
+        public Klub K { get; set; }
         public DodajFudbalera()
         {
             InitializeComponent();
@@ -34,11 +35,19 @@ namespace Mongo_Fudbal
             var db = server.GetDatabase("fudbal");
 
             var igraciColl = db.GetCollection<Utakmica>("igraci");
+            var kluboviColl = db.GetCollection<Klub>("klubovi");
+
+            MongoDBRef pom1 = new MongoDBRef("klubovi", K.Id);
+
+            Fudbaler fd = new Fudbaler { Ime = txbIme.Text, Prezime = txbPrez.Text, Drzava = txbDrzava.Text, God_rodj = Int32.Parse(txbGod.Text),
+                                         Klub=pom1,Broj_gol=Int32.Parse(txbGol.Text) };
 
 
-            Fudbaler fd = new Fudbaler { Ime = txbIme.Text, Prezime = txbPrez.Text, Drzava = txbDrzava.Text, God_rodj = Int32.Parse(txbGod.Text) };
 
             igraciColl.Insert(fd);
+
+            K.Igraci.Add(pom1);
+            kluboviColl.Save(K);
             this.Close();
             
         }
