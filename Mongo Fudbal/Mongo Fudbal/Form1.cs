@@ -9,6 +9,7 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
+using System.Drawing;
 
 namespace Mongo_Fudbal
 {
@@ -61,6 +62,9 @@ namespace Mongo_Fudbal
         private void Form1_Load(object sender, EventArgs e)
         {
             ucitajDGV();
+            btnDelete.BackgroundImage = Image.FromFile("../icons/delete.png");
+            btnDelete.BackgroundImageLayout = ImageLayout.Stretch;
+
         }
 
 
@@ -72,6 +76,28 @@ namespace Mongo_Fudbal
             lform.ShowDialog();
             ucitajDGV();
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
+            var collection = db.GetCollection<Liga>("lige");
+
+            Liga l = dataGridView1.CurrentRow.DataBoundItem as Liga;
+            if (l.Klubovi.Count > 0 || l.Utakmice.Count > 0)
+            {
+                MessageBox.Show("Ne moze da se obrise liga koja sadrzi klubove i utakmice");
+                return;
+            }
+            else
+            {
+                collection.Remove(Query.EQ("_id", l.Id));
+                MessageBox.Show("Liga je obrisana");
+                ucitajDGV();
+            }
         }
     }
 }

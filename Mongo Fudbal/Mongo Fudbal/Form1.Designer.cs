@@ -36,6 +36,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnIzaberi = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +83,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkGreen;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
@@ -116,18 +117,35 @@
             this.btnIzaberi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIzaberi.Location = new System.Drawing.Point(249, 557);
             this.btnIzaberi.Name = "btnIzaberi";
-            this.btnIzaberi.Size = new System.Drawing.Size(472, 45);
+            this.btnIzaberi.Size = new System.Drawing.Size(418, 45);
             this.btnIzaberi.TabIndex = 4;
             this.btnIzaberi.Text = "Izaberi ligu";
             this.btnIzaberi.UseVisualStyleBackColor = false;
             this.btnIzaberi.Click += new System.EventHandler(this.btnIzaberi_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.White;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(673, 557);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(45, 45);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImage = global::Mongo_Fudbal.Properties.Resources.pozadina12;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(983, 629);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnIzaberi);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -155,6 +173,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIzaberi;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 

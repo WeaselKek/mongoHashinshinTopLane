@@ -74,8 +74,21 @@ namespace Mongo_Fudbal
 
         private void button2_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            lblSlika.Text = openFileDialog1.FileName;
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                lblSlika.Text = openFileDialog1.FileName;
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                openFileDialog1.FileName = "";
+            }
+            
+        }
+
+        private void DodajKlub_Load(object sender, EventArgs e)
+        {
+            openFileDialog1.FileName = "";
         }
     }
 }

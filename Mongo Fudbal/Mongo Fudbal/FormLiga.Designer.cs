@@ -43,6 +43,8 @@
             this.dataGridViewTabela = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dodajKlubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnDeleteU = new System.Windows.Forms.Button();
             this.tabLiga.SuspendLayout();
             this.tabUtakmice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtakmice)).BeginInit();
@@ -75,6 +77,7 @@
             // 
             // tabUtakmice
             // 
+            this.tabUtakmice.Controls.Add(this.btnDeleteU);
             this.tabUtakmice.Controls.Add(this.btnIzaberiUtakmicu);
             this.tabUtakmice.Controls.Add(this.dataGridViewUtakmice);
             this.tabUtakmice.Controls.Add(this.btnDodajUtakmicu);
@@ -88,11 +91,11 @@
             // 
             // btnIzaberiUtakmicu
             // 
-            this.btnIzaberiUtakmicu.Location = new System.Drawing.Point(217, 388);
+            this.btnIzaberiUtakmicu.Location = new System.Drawing.Point(207, 385);
             this.btnIzaberiUtakmicu.Name = "btnIzaberiUtakmicu";
-            this.btnIzaberiUtakmicu.Size = new System.Drawing.Size(180, 35);
+            this.btnIzaberiUtakmicu.Size = new System.Drawing.Size(180, 45);
             this.btnIzaberiUtakmicu.TabIndex = 4;
-            this.btnIzaberiUtakmicu.Text = "Izaberi utakmicu";
+            this.btnIzaberiUtakmicu.Text = "Prikazi utakmicu";
             this.btnIzaberiUtakmicu.UseVisualStyleBackColor = true;
             this.btnIzaberiUtakmicu.Click += new System.EventHandler(this.btnIzaberiUtakmicu_Click);
             // 
@@ -128,9 +131,9 @@
             // 
             // btnDodajUtakmicu
             // 
-            this.btnDodajUtakmicu.Location = new System.Drawing.Point(6, 388);
+            this.btnDodajUtakmicu.Location = new System.Drawing.Point(6, 385);
             this.btnDodajUtakmicu.Name = "btnDodajUtakmicu";
-            this.btnDodajUtakmicu.Size = new System.Drawing.Size(180, 35);
+            this.btnDodajUtakmicu.Size = new System.Drawing.Size(180, 45);
             this.btnDodajUtakmicu.TabIndex = 1;
             this.btnDodajUtakmicu.Text = "Dodaj utakmicu";
             this.btnDodajUtakmicu.UseVisualStyleBackColor = true;
@@ -138,6 +141,7 @@
             // 
             // tabTabela
             // 
+            this.tabTabela.Controls.Add(this.btnDelete);
             this.tabTabela.Controls.Add(this.btnIzaberiKlub);
             this.tabTabela.Controls.Add(this.dataGridViewTabela);
             this.tabTabela.Location = new System.Drawing.Point(4, 29);
@@ -150,9 +154,9 @@
             // 
             // btnIzaberiKlub
             // 
-            this.btnIzaberiKlub.Location = new System.Drawing.Point(269, 389);
+            this.btnIzaberiKlub.Location = new System.Drawing.Point(6, 387);
             this.btnIzaberiKlub.Name = "btnIzaberiKlub";
-            this.btnIzaberiKlub.Size = new System.Drawing.Size(180, 35);
+            this.btnIzaberiKlub.Size = new System.Drawing.Size(180, 45);
             this.btnIzaberiKlub.TabIndex = 5;
             this.btnIzaberiKlub.Text = "Izaberi klub";
             this.btnIzaberiKlub.UseVisualStyleBackColor = true;
@@ -207,6 +211,28 @@
             this.dodajKlubToolStripMenuItem.Text = "Dodaj klub";
             this.dodajKlubToolStripMenuItem.Click += new System.EventHandler(this.dodajKlubToolStripMenuItem_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackgroundImage = global::Mongo_Fudbal.Properties.Resources.delete;
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Location = new System.Drawing.Point(691, 387);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(45, 45);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnDeleteU
+            // 
+            this.btnDeleteU.BackgroundImage = global::Mongo_Fudbal.Properties.Resources.delete;
+            this.btnDeleteU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteU.Location = new System.Drawing.Point(691, 385);
+            this.btnDeleteU.Name = "btnDeleteU";
+            this.btnDeleteU.Size = new System.Drawing.Size(45, 45);
+            this.btnDeleteU.TabIndex = 7;
+            this.btnDeleteU.UseVisualStyleBackColor = true;
+            this.btnDeleteU.Click += new System.EventHandler(this.btnDeleteU_Click);
+            // 
             // FormLiga
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,5 +271,7 @@
         private System.Windows.Forms.ToolStripMenuItem dodajKlubToolStripMenuItem;
         private System.Windows.Forms.Button btnIzaberiKlub;
         private System.Windows.Forms.Button btnIzaberiUtakmicu;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnDeleteU;
     }
 }

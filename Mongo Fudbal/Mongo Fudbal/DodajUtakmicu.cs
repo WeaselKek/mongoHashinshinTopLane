@@ -58,6 +58,9 @@ namespace Mongo_Fudbal
             Klub homek = db.FetchDBRefAs<Klub>(homeref);
             Klub awayk = db.FetchDBRefAs<Klub>(awayref);
 
+            homek.Utakmice.Add(new MongoDBRef("utakmice", ut.Id));
+            awayk.Utakmice.Add(new MongoDBRef("utakmice", ut.Id));
+
             if (Int32.Parse(golH.Text) > Int32.Parse(golA.Text))
             {
                 homek.Bodovi += 3;
