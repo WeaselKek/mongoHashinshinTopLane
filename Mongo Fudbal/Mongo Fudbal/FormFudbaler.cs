@@ -8,13 +8,51 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MongoDB.Driver;
+using MongoDB.Bson;
+using MongoDB.Driver.Builders;
+using MongoDB.Driver.Linq;
+
 namespace Mongo_Fudbal
 {
     public partial class FormFudbaler : Form
     {
+        public Fudbaler F { get; set; }
         public FormFudbaler()
         {
             InitializeComponent();
+        }
+
+        private void FormFudbaler_Load(object sender, EventArgs e)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+            
+            this.Text = F.Ime+" "+F.Prezime;
+            lblIme.Text = F.Ime;
+            lblPrez.Text = F.Prezime;
+            lblDrz.Text = F.Drzava;
+            lblGod.Text=F.God_rodj.ToString();
+            txtGol.Text = F.Broj_gol.ToString();
+
+            Klub kl = db.FetchDBRefAs<Klub>(F.Klub);
+
+            lblKlub.Text = kl.Ime;
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
+            var igraciColl = db.GetCollection<Fudbaler>("igraci");
+
+            F.Broj_gol = Int32.Parse(txtGol.Text);
+            igraciColl.Save(F);
+            this.Close();
         }
     }
 }

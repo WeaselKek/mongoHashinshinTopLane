@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Mongo_Fudbal.Funkcije;
 
 namespace Mongo_Fudbal
 {
@@ -40,7 +41,6 @@ namespace Mongo_Fudbal
             dataGridViewIgraci.Columns["id"].Visible = false;
             dataGridViewIgraci.Columns["Klub"].Visible = false;
            
-
         }
 
         private void FormKlub_Load(object sender, EventArgs e)
@@ -67,6 +67,17 @@ namespace Mongo_Fudbal
             DodajFudbalera formdf = new DodajFudbalera();
             formdf.K = this.K;
             formdf.ShowDialog();
+            UcitajDGVIgraci();
+        }
+
+        private void btnVidi_Click(object sender, EventArgs e)
+        {
+            if (!Provera.chkIfSelected(dataGridViewIgraci))
+                return;
+
+            FormFudbaler duform = new FormFudbaler();
+            duform.F = dataGridViewIgraci.CurrentRow.DataBoundItem as Fudbaler;
+            duform.ShowDialog();
             UcitajDGVIgraci();
         }
     }

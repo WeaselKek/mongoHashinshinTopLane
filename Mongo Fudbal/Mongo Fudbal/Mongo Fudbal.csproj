@@ -114,6 +114,7 @@
       <DependentUpon>FormUtakmica.cs</DependentUpon>
     </Compile>
     <Compile Include="Fudbaler.cs" />
+    <Compile Include="Funkcije\Funkcije.cs" />
     <Compile Include="Klub.cs" />
     <Compile Include="Liga.cs" />
     <Compile Include="Program.cs" />
