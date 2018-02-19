@@ -63,6 +63,8 @@ namespace Mongo_Fudbal
         private void Form1_Load(object sender, EventArgs e)
         {
             ucitajDGV();
+            btnUpdate.BackgroundImage = Image.FromFile("../../icons/edit.png");
+            btnUpdate.BackgroundImageLayout = ImageLayout.Stretch;
             btnDelete.BackgroundImage = Image.FromFile("../../icons/delete.png");
             btnDelete.BackgroundImageLayout = ImageLayout.Stretch;
             this.BackgroundImage = Image.FromFile("../../slike/pozadina1.jpg");

@@ -107,6 +107,10 @@ namespace Mongo_Fudbal
             {
                 dataGridViewTabela.Columns["Utakmice"].Visible = false;
             }
+            if (dataGridViewTabela.Columns.Contains("Slika"))
+            {
+                dataGridViewTabela.Columns["Slika"].Visible = false;
+            }
 
             dataGridViewTabela.ClearSelection();
             

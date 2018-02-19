@@ -72,10 +72,13 @@ namespace Mongo_Fudbal
 
             Fudbaler fd = new Fudbaler { Ime = txbIme.Text, Prezime = txbPrez.Text, Drzava = txbDrzava.Text, God_rodj = Int32.Parse(txbGod.Text),
                                          Klub=pom1, Broj_gol = 0 };
+            igraciColl.Insert(fd);
 
             fd.Slika = upload_image(fd);
 
-            igraciColl.Insert(fd);
+            igraciColl.Save(fd);
+
+            
 
             K.Igraci.Add(new MongoDBRef("igraci", fd.Id));
             kluboviColl.Save(K);

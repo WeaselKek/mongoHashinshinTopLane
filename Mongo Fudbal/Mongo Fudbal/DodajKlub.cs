@@ -66,12 +66,14 @@ namespace Mongo_Fudbal
             MongoDBRef liga1 = new MongoDBRef("lige", L.Id);
 
             Klub klub = new Klub { Ime = txtNaziv.Text, Grad = txtGrad.Text, Bodovi = 0, Stadion = txtStadion.Text, God_osn = Int32.Parse(txtGodina.Text), Liga = liga1 };  
+          
+            kluboviColl.Insert(klub);
 
             klub.Slika = upload_image(klub);
 
-            kluboviColl.Insert(klub);
+            kluboviColl.Save(klub);
 
-           
+
             MongoDBRef klub1 = new MongoDBRef("klubovi", klub.Id);
 
             L.Klubovi.Add(klub1);

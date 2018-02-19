@@ -44,7 +44,7 @@ namespace Mongo_Fudbal
             {
                 Fudbaler f = db.FetchDBRefAs<Fudbaler>(d.Igrac);
                 var index = dataGridViewDogadjaji.Rows.Add();
-                dataGridViewDogadjaji.Rows[index].Cells[0].Value = d.Minut + "' " + d.Tip + "\t" + f.ToString();
+                dataGridViewDogadjaji.Rows[index].Cells[0].Value = d.Minut + "' " + d.Tip + "   " + f.ToString();
                 dataGridViewDogadjaji.Rows[index].Tag = d;
             }
 
