@@ -1,4 +1,5 @@
 ﻿using MongoDB.Driver;
+using MongoDB.Driver.Builders;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,10 @@ namespace Mongo_Fudbal
             InitializeComponent();
         }
 
-        private void UcitajListBoxDogadjaji()
+        private void UcitajDGVDogadjaji()
         {
-            listBoxDogadjaji.Items.Clear();
+            dataGridViewDogadjaji.Rows.Clear();
+            dataGridViewDogadjaji.Refresh();
 
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
@@ -38,20 +40,21 @@ namespace Mongo_Fudbal
 
             listad.Sort((x, y) => x.Minut.CompareTo(y.Minut));
 
-            
-
             foreach (Dogadjaj d in listad)
             {
-                MongoDBRef fRef = new MongoDBRef("igraci", d.Igrac.Id);
-                Fudbaler f = db.FetchDBRefAs<Fudbaler>(fRef);
-                String s = d.Minut + "'  " + d.Tip + "   " + f.Ime + " " + f.Prezime;
-                listBoxDogadjaji.Items.Add(s);
+                Fudbaler f = db.FetchDBRefAs<Fudbaler>(d.Igrac);
+                var index = dataGridViewDogadjaji.Rows.Add();
+                dataGridViewDogadjaji.Rows[index].Cells[0].Value = d.Minut + "' " + d.Tip + "\t" + f.ToString();
+                dataGridViewDogadjaji.Rows[index].Tag = d;
             }
 
         }
 
         private void FormUtakmica_Load(object sender, EventArgs e)
         {
+            btnDelete.BackgroundImage = Image.FromFile("../../icons/delete.png");
+            btnDelete.BackgroundImageLayout = ImageLayout.Stretch;
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
@@ -66,7 +69,11 @@ namespace Mongo_Fudbal
             lblRezultat.Text = U.Rezultat;
             lblStadion.Text = "Stadion: " + klub1.Stadion;
 
-            UcitajListBoxDogadjaji();
+
+            dataGridViewDogadjaji.ColumnCount = 1;
+            dataGridViewDogadjaji.Columns[0].Name = "";
+
+            UcitajDGVDogadjaji();
 
         }
 
@@ -75,7 +82,28 @@ namespace Mongo_Fudbal
             DodajDogadjaj ddform = new DodajDogadjaj();
             ddform.U = this.U;
             ddform.ShowDialog();
-            UcitajListBoxDogadjaji();
+            UcitajDGVDogadjaji();
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
+            var utakmiceColl = db.GetCollection<Utakmica>("utakmice");
+            var dogadjajiColl = db.GetCollection<Dogadjaj>("dogadjaji");
+
+            Dogadjaj d = dataGridViewDogadjaji.CurrentRow.Tag as Dogadjaj;
+            MongoDBRef mdbref = new MongoDBRef("dogadjaji", d.Id);
+            U.Dogadjaji.Remove(mdbref);
+
+            utakmiceColl.Save(U);
+
+            dogadjajiColl.Remove(Query.EQ("_iq", d.Id));
+
+            UcitajDGVDogadjaji();
 
         }
     }

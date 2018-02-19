@@ -42,6 +42,10 @@ namespace Mongo_Fudbal
             dataGridViewIgraci.Columns["Klub"].Visible = false;
             dataGridViewIgraci.Columns["God_rodj"].Visible = false;
             dataGridViewIgraci.Columns["Broj_gol"].Visible = false;
+            if (dataGridViewIgraci.Columns.Contains("Slika"))
+            {
+                dataGridViewIgraci.Columns["Slika"].Visible = false;
+            }
 
 
         }
