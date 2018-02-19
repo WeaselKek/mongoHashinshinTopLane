@@ -92,5 +92,15 @@ namespace Mongo_Fudbal
             duform.ShowDialog();
             UcitajDGVIgraci();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (!Provera.chkIfSelected(dataGridViewIgraci))
+                return;
+            DodajFudbalera duform = new DodajFudbalera();
+            duform.UpdateItem = dataGridViewIgraci.CurrentRow.DataBoundItem as Fudbaler;
+            duform.ShowDialog();
+            UcitajDGVIgraci();
+        }
     }
 }

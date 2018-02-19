@@ -19,6 +19,7 @@ namespace Mongo_Fudbal
     public partial class DodajFudbalera : Form
     {
         public Klub K { get; set; }
+        public Fudbaler UpdateItem { get; set; }
         public DodajFudbalera()
         {
             InitializeComponent();
@@ -47,10 +48,6 @@ namespace Mongo_Fudbal
             return destFile;
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
@@ -58,6 +55,12 @@ namespace Mongo_Fudbal
             if ((txbIme.Text == "") || (txbPrez.Text == "") || (txbDrzava.Text == "") || (txbGod.Text == ""))
             {
                 MessageBox.Show("Niste uneli sva potrebna polja");
+                return;
+            }
+
+            if (UpdateItem != null)
+            {
+                Azuriraj();
                 return;
             }
 
@@ -86,6 +89,31 @@ namespace Mongo_Fudbal
             
         }
 
+        private void Azuriraj()
+        {
+
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
+            var collection = db.GetCollection<Fudbaler>("igraci");
+
+
+
+            var query = Query.EQ("_id", UpdateItem.Id);
+            Fudbaler fu = collection.Find(query).Single();
+
+
+            fu.Ime = txbIme.Text;
+            fu.Prezime = txbPrez.Text;
+            fu.Drzava = txbDrzava.Text;
+            fu.God_rodj = Int32.Parse(txbGod.Text);
+            fu.Slika = upload_image(fu);
+
+            collection.Save(fu);
+            this.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = openFileDialog1.ShowDialog();
@@ -101,6 +129,16 @@ namespace Mongo_Fudbal
 
         private void DodajFudbalera_Load(object sender, EventArgs e)
         {
+            if (UpdateItem != null)
+            {
+                btnTrue.Text = "Azuriraj";
+                txbIme.Text = UpdateItem.Ime;
+                txbPrez.Text = UpdateItem.Prezime;
+                txbDrzava.Text = UpdateItem.Drzava;
+                txbGod.Text = UpdateItem.God_rodj.ToString();
+                lblSlika.Text = UpdateItem.Slika;
+                return;
+            }
             openFileDialog1.FileName = "";
         }
 
