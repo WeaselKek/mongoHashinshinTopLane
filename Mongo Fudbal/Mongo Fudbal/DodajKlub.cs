@@ -30,7 +30,7 @@ namespace Mongo_Fudbal
             }
                     
             string sourceFile = openFileDialog1.FileName;
-            string targetPath = "../slike/Klubovi";
+            string targetPath = "../../slike/Klubovi";
 
             if (!System.IO.Directory.Exists(targetPath))
             {
