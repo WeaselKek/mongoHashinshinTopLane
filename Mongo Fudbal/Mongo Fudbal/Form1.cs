@@ -27,7 +27,7 @@ namespace Mongo_Fudbal
 
             var collection = db.GetCollection<Liga>("lige");
 
-            List<Liga> lista = new List<Liga>(collection.FindAll());
+            List<Liga> lista = new List<Liga>(collection.FindAll().SetSortOrder(SortBy.Ascending("Drzava")));
             dataGridView1.DataSource = lista;
             dataGridView1.Columns["id"].Visible = false;
         }

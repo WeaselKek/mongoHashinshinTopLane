@@ -27,6 +27,11 @@ namespace Mongo_Fudbal
         {
             this.Text = L.Ime;
             lblNazivLige.Text = L.Ime + " (" + L.Drzava + ")";
+
+            dataGridViewUtakmice.ColumnCount = 3;
+            dataGridViewUtakmice.Columns[0].Name = "";
+            dataGridViewUtakmice.Columns[1].Name = "Rezultat";
+            dataGridViewUtakmice.Columns[2].Name = "Datum";
             UcitajDGVUtakmice();
 
 
@@ -39,17 +44,30 @@ namespace Mongo_Fudbal
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
 
-            List<Utakmica> listau = new List<Utakmica>();
+            dataGridViewUtakmice.Rows.Clear();
+            dataGridViewUtakmice.Refresh();
 
-            foreach (MongoDBRef utakmicaRef in L.Utakmice.ToList())
-            {
-                Utakmica u = db.FetchDBRefAs<Utakmica>(utakmicaRef);
-                listau.Add(u);
+            var utakmiceColl = db.GetCollection<Utakmica>("utakmice");
+
+            var query1 = from utakmica in utakmiceColl.AsQueryable<Utakmica>()
+                         where utakmica.Liga.Id == L.Id
+                         orderby utakmica.Datum descending
+                         select utakmica;
+
+            List<Utakmica> lista = new List<Utakmica>(query1);
+
+
+            foreach (Utakmica u in lista)
+            {               
+                Klub klub1 = db.FetchDBRefAs<Klub>(u.Klub1);
+                Klub klub2 = db.FetchDBRefAs<Klub>(u.Klub2);                
+                var index = dataGridViewUtakmice.Rows.Add();
+                dataGridViewUtakmice.Rows[index].Cells[0].Value = klub1.Ime + " - " + klub2.Ime;
+                dataGridViewUtakmice.Rows[index].Cells["Rezultat"].Value = u.Rezultat;
+                dataGridViewUtakmice.Rows[index].Cells["Datum"].Value = u.Datum.ToString();
+                dataGridViewUtakmice.Rows[index].Tag = u.Id;
+
             }
-
-            listau.Sort((x, y) => x.Datum.CompareTo(y.Datum));
-
-            dataGridViewUtakmice.DataSource = listau;
         }
 
         private void UcitajDGVTabela()
@@ -80,8 +98,14 @@ namespace Mongo_Fudbal
             dataGridViewTabela.Columns["Grad"].Visible = false;
             dataGridViewTabela.Columns["Stadion"].Visible = false;
             dataGridViewTabela.Columns["Liga"].Visible = false;
-            //dataGridViewTabela.Columns["Igraci"].Visible = false;
-            //dataGridViewTabela.Columns["Utakmice"].Visible = false;
+            if (dataGridViewTabela.Columns.Contains("Igraci"))
+            {
+                dataGridViewTabela.Columns["Igraci"].Visible = false;
+            }
+            if (dataGridViewTabela.Columns.Contains("Utakmice"))
+            {
+                dataGridViewTabela.Columns["Utakmice"].Visible = false;
+            }
         }
 
         private void tabLiga_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,9 +141,16 @@ namespace Mongo_Fudbal
 
         private void btnIzaberiUtakmicu_Click(object sender, EventArgs e)
         {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
             FormUtakmica uform = new FormUtakmica();
-            Utakmica ut = dataGridViewUtakmice.CurrentRow.DataBoundItem as Utakmica;
-            uform.U = ut;
+            ObjectId objid = (ObjectId) dataGridViewUtakmice.CurrentRow.Tag;
+
+            MongoDBRef mref = new MongoDBRef("utakmice", objid);
+            Utakmica u = db.FetchDBRefAs<Utakmica>(mref);
+            uform.U = u;
             uform.ShowDialog();
             UcitajDGVUtakmice();
         }
