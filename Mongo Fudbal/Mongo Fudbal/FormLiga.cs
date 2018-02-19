@@ -26,6 +26,11 @@ namespace Mongo_Fudbal
 
         private void FormLiga_Load(object sender, EventArgs e)
         {
+            btnDelete.BackgroundImage = Image.FromFile("../../icons/delete.png");
+            btnDelete.BackgroundImageLayout = ImageLayout.Stretch;
+            btnDeleteU.BackgroundImage = Image.FromFile("../../icons/delete.png");
+            btnDeleteU.BackgroundImageLayout = ImageLayout.Stretch;
+
             this.Text = L.Ime;
             lblNazivLige.Text = L.Ime + " (" + L.Drzava + ")";
 

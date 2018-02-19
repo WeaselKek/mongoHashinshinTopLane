@@ -35,16 +35,16 @@
             this.lblNazivLige = new System.Windows.Forms.Label();
             this.tabLiga = new System.Windows.Forms.TabControl();
             this.tabUtakmice = new System.Windows.Forms.TabPage();
+            this.btnDeleteU = new System.Windows.Forms.Button();
             this.btnIzaberiUtakmicu = new System.Windows.Forms.Button();
             this.dataGridViewUtakmice = new System.Windows.Forms.DataGridView();
             this.btnDodajUtakmicu = new System.Windows.Forms.Button();
             this.tabTabela = new System.Windows.Forms.TabPage();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnIzaberiKlub = new System.Windows.Forms.Button();
             this.dataGridViewTabela = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dodajKlubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.btnDeleteU = new System.Windows.Forms.Button();
             this.tabLiga.SuspendLayout();
             this.tabUtakmice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtakmice)).BeginInit();
@@ -88,6 +88,16 @@
             this.tabUtakmice.TabIndex = 1;
             this.tabUtakmice.Text = "Utakmice";
             this.tabUtakmice.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteU
+            // 
+            this.btnDeleteU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteU.Location = new System.Drawing.Point(691, 385);
+            this.btnDeleteU.Name = "btnDeleteU";
+            this.btnDeleteU.Size = new System.Drawing.Size(45, 45);
+            this.btnDeleteU.TabIndex = 7;
+            this.btnDeleteU.UseVisualStyleBackColor = true;
+            this.btnDeleteU.Click += new System.EventHandler(this.btnDeleteU_Click);
             // 
             // btnIzaberiUtakmicu
             // 
@@ -152,6 +162,16 @@
             this.tabTabela.Text = "Tabela";
             this.tabTabela.UseVisualStyleBackColor = true;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Location = new System.Drawing.Point(691, 387);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(45, 45);
+            this.btnDelete.TabIndex = 6;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // btnIzaberiKlub
             // 
             this.btnIzaberiKlub.Location = new System.Drawing.Point(6, 387);
@@ -210,28 +230,6 @@
             this.dodajKlubToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.dodajKlubToolStripMenuItem.Text = "Dodaj klub";
             this.dodajKlubToolStripMenuItem.Click += new System.EventHandler(this.dodajKlubToolStripMenuItem_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackgroundImage = global::Mongo_Fudbal.Properties.Resources.delete;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(691, 387);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(45, 45);
-            this.btnDelete.TabIndex = 6;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // btnDeleteU
-            // 
-            this.btnDeleteU.BackgroundImage = global::Mongo_Fudbal.Properties.Resources.delete;
-            this.btnDeleteU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeleteU.Location = new System.Drawing.Point(691, 385);
-            this.btnDeleteU.Name = "btnDeleteU";
-            this.btnDeleteU.Size = new System.Drawing.Size(45, 45);
-            this.btnDeleteU.TabIndex = 7;
-            this.btnDeleteU.UseVisualStyleBackColor = true;
-            this.btnDeleteU.Click += new System.EventHandler(this.btnDeleteU_Click);
             // 
             // FormLiga
             // 

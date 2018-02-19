@@ -142,7 +142,6 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImage = global::Mongo_Fudbal.Properties.Resources.pozadina12;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(983, 629);
             this.Controls.Add(this.btnDelete);
