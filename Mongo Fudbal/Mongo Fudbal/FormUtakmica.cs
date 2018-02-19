@@ -106,5 +106,11 @@ namespace Mongo_Fudbal
             UcitajDGVDogadjaji();
 
         }
+
+        private void FormUtakmica_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
     }
 }

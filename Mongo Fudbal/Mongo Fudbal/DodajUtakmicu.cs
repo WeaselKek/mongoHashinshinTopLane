@@ -41,6 +41,8 @@ namespace Mongo_Fudbal
              }
 
 
+
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
@@ -95,8 +97,10 @@ namespace Mongo_Fudbal
             this.Close();
         }
 
+
         private void DodajUtakmicu_Load(object sender, EventArgs e)
         {
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");

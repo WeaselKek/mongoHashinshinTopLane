@@ -17,7 +17,7 @@ namespace Mongo_Fudbal
 {
     public partial class DodajLigu : Form
     {
-        private bool updaterino = false;
+        
 
         public Liga UpdateItem
         {
@@ -31,16 +31,18 @@ namespace Mongo_Fudbal
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (UpdateItem != null)
-            {            
-                Update();
-                return;
-            }
+            
 
             //validacija
             if ((txtNaziv.Text == "") || (txtDrzava.Text == ""))
             {
                 MessageBox.Show("Niste uneli sva potrebna polja");
+                return;
+            }
+
+            if (UpdateItem != null)
+            {
+                Azuriraj();
                 return;
             }
 
@@ -65,7 +67,7 @@ namespace Mongo_Fudbal
 
             this.Close();
         }
-        private void Update()
+        private void Azuriraj()
         {
 
             var connectionString = "mongodb://localhost/?safe=true";
