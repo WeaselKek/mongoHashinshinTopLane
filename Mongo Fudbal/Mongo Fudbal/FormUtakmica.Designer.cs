@@ -40,7 +40,7 @@
             // 
             // lblDomacin
             // 
-            this.lblDomacin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDomacin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDomacin.Location = new System.Drawing.Point(12, 74);
             this.lblDomacin.Name = "lblDomacin";
             this.lblDomacin.Size = new System.Drawing.Size(289, 33);
@@ -50,7 +50,7 @@
             // 
             // lblGost
             // 
-            this.lblGost.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGost.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGost.Location = new System.Drawing.Point(443, 73);
             this.lblGost.Name = "lblGost";
             this.lblGost.Size = new System.Drawing.Size(274, 32);
@@ -60,7 +60,7 @@
             // 
             // lblRezultat
             // 
-            this.lblRezultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRezultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRezultat.Location = new System.Drawing.Point(322, 70);
             this.lblRezultat.Name = "lblRezultat";
             this.lblRezultat.Size = new System.Drawing.Size(106, 37);

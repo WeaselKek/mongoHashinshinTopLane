@@ -12,6 +12,7 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
+using System.IO;
 
 namespace Mongo_Fudbal
 {
@@ -21,6 +22,29 @@ namespace Mongo_Fudbal
         public DodajFudbalera()
         {
             InitializeComponent();
+        }
+
+        private string upload_image(Fudbaler f)
+        {
+            if (String.IsNullOrEmpty(openFileDialog1.FileName))
+            {
+                return null;
+            }
+
+            string sourceFile = openFileDialog1.FileName;
+            string targetPath = "../slike/Fudbaleri";
+
+            if (!System.IO.Directory.Exists(targetPath))
+            {
+                System.IO.Directory.CreateDirectory(targetPath);
+            }
+            string fileName = f.Id.ToString() + Path.GetExtension(openFileDialog1.FileName);
+
+            string destFile = System.IO.Path.Combine(targetPath, fileName);
+
+            System.IO.File.Copy(sourceFile, destFile, true);
+
+            return destFile;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -40,9 +64,9 @@ namespace Mongo_Fudbal
             MongoDBRef pom1 = new MongoDBRef("klubovi", K.Id);
 
             Fudbaler fd = new Fudbaler { Ime = txbIme.Text, Prezime = txbPrez.Text, Drzava = txbDrzava.Text, God_rodj = Int32.Parse(txbGod.Text),
-                                         Klub=pom1, Broj_gol=Int32.Parse(txbGol.Text) };
+                                         Klub=pom1, Broj_gol = 0 };
 
-
+            fd.Slika = upload_image(fd);
 
             igraciColl.Insert(fd);
 
@@ -50,6 +74,12 @@ namespace Mongo_Fudbal
             kluboviColl.Save(K);
             this.Close();
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            lblSlika.Text = openFileDialog1.FileName;
         }
     }
 }

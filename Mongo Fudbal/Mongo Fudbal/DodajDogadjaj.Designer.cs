@@ -41,27 +41,27 @@
             // txtMinut
             // 
             this.txtMinut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMinut.Location = new System.Drawing.Point(108, 112);
-            this.txtMinut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMinut.Location = new System.Drawing.Point(108, 85);
+            this.txtMinut.Margin = new System.Windows.Forms.Padding(4);
             this.txtMinut.Name = "txtMinut";
-            this.txtMinut.Size = new System.Drawing.Size(96, 28);
+            this.txtMinut.Size = new System.Drawing.Size(77, 28);
             this.txtMinut.TabIndex = 0;
             // 
             // cbxIgrac
             // 
             this.cbxIgrac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxIgrac.FormattingEnabled = true;
-            this.cbxIgrac.Location = new System.Drawing.Point(303, 112);
-            this.cbxIgrac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxIgrac.Location = new System.Drawing.Point(108, 175);
+            this.cbxIgrac.Margin = new System.Windows.Forms.Padding(4);
             this.cbxIgrac.Name = "cbxIgrac";
-            this.cbxIgrac.Size = new System.Drawing.Size(191, 30);
+            this.cbxIgrac.Size = new System.Drawing.Size(269, 30);
             this.cbxIgrac.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(299, 84);
+            this.label1.Location = new System.Drawing.Point(104, 147);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 24);
@@ -71,8 +71,8 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(394, 354);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(334, 354);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(100, 41);
             this.btnCancel.TabIndex = 4;
@@ -84,7 +84,7 @@
             // 
             this.btnTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrue.Location = new System.Drawing.Point(108, 354);
-            this.btnTrue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(4);
             this.btnTrue.Name = "btnTrue";
             this.btnTrue.Size = new System.Drawing.Size(100, 40);
             this.btnTrue.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 84);
+            this.label2.Location = new System.Drawing.Point(104, 57);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 24);
@@ -108,21 +108,21 @@
             this.cbxTip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTip.FormattingEnabled = true;
             this.cbxTip.Items.AddRange(new object[] {
-            "Gol\t",
+            "Gol",
             "Autogol",
             "Crveni Karton",
             "Zuti Karton"});
-            this.cbxTip.Location = new System.Drawing.Point(108, 195);
-            this.cbxTip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxTip.Location = new System.Drawing.Point(108, 262);
+            this.cbxTip.Margin = new System.Windows.Forms.Padding(4);
             this.cbxTip.Name = "cbxTip";
-            this.cbxTip.Size = new System.Drawing.Size(216, 30);
+            this.cbxTip.Size = new System.Drawing.Size(231, 30);
             this.cbxTip.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(105, 167);
+            this.label3.Location = new System.Drawing.Point(104, 234);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 24);
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 444);
+            this.ClientSize = new System.Drawing.Size(512, 444);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbxTip);
             this.Controls.Add(this.label2);
@@ -142,7 +142,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxIgrac);
             this.Controls.Add(this.txtMinut);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DodajDogadjaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DodajDogadjaj";

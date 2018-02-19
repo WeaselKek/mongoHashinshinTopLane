@@ -30,15 +30,19 @@ namespace Mongo_Fudbal
             var db = server.GetDatabase("fudbal");
             
             this.Text = F.Ime+" "+F.Prezime;
-            lblIme.Text = F.Ime;
-            lblPrez.Text = F.Prezime;
+            lblIme.Text = F.Ime + " " + F.Prezime;
             lblDrz.Text = F.Drzava;
             lblGod.Text=F.God_rodj.ToString();
-            txtGol.Text = F.Broj_gol.ToString();
+            lblGolovi.Text = F.Broj_gol.ToString();
 
             Klub kl = db.FetchDBRefAs<Klub>(F.Klub);
 
             lblKlub.Text = kl.Ime;
+
+            if (!String.IsNullOrEmpty(F.Slika))
+            {
+                pictureBox1.ImageLocation = F.Slika;
+            }
 
         }
 
@@ -50,9 +54,9 @@ namespace Mongo_Fudbal
 
             var igraciColl = db.GetCollection<Fudbaler>("igraci");
 
-            F.Broj_gol = Int32.Parse(txtGol.Text);
-            igraciColl.Save(F);
-            this.Close();
+            //F.Broj_gol = Int32.Parse(txtGol.Text);
+            //igraciColl.Save(F);
+            //this.Close();
         }
     }
 }

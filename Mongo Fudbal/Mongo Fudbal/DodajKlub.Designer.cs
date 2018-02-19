@@ -37,6 +37,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtGodina = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.button2 = new System.Windows.Forms.Button();
+            this.lblSlika = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNaziv
@@ -114,7 +117,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(136, 400);
+            this.button1.Location = new System.Drawing.Point(142, 485);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(182, 43);
             this.button1.TabIndex = 9;
@@ -122,11 +125,37 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(58, 388);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 33);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Izaberi sliku";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // lblSlika
+            // 
+            this.lblSlika.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSlika.Location = new System.Drawing.Point(207, 395);
+            this.lblSlika.Name = "lblSlika";
+            this.lblSlika.Size = new System.Drawing.Size(197, 24);
+            this.lblSlika.TabIndex = 11;
+            this.lblSlika.Text = "Nije izabrana slika";
+            // 
             // DodajKlub
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 479);
+            this.ClientSize = new System.Drawing.Size(463, 553);
+            this.Controls.Add(this.lblSlika);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtGodina);
             this.Controls.Add(this.label4);
@@ -155,5 +184,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtGodina;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblSlika;
     }
 }

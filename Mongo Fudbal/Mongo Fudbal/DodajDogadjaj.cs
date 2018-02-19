@@ -47,6 +47,13 @@ namespace Mongo_Fudbal
 
             U.Dogadjaji.Add(new MongoDBRef("dogadjaji", dog.Id));
             utakmiceColl.Save(U);
+
+            if (cbxTip.Text == "Gol")
+            {
+                igrac.Broj_gol += 1;
+                igraciColl.Save(igrac);
+            }
+
             this.Close();
         }
 

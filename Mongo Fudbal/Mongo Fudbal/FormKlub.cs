@@ -40,7 +40,10 @@ namespace Mongo_Fudbal
 
             dataGridViewIgraci.Columns["id"].Visible = false;
             dataGridViewIgraci.Columns["Klub"].Visible = false;
-           
+            dataGridViewIgraci.Columns["God_rodj"].Visible = false;
+            dataGridViewIgraci.Columns["Broj_gol"].Visible = false;
+
+
         }
 
         private void FormKlub_Load(object sender, EventArgs e)
@@ -53,6 +56,11 @@ namespace Mongo_Fudbal
             lblNaziv.Text = K.Ime;
             lblGrad.Text = "Grad: " + K.Grad;
             lblGodina.Text = "Godina osnivanja: " + K.God_osn;
+
+            if (!String.IsNullOrEmpty(K.Slika))
+            {
+                pictureBox1.ImageLocation = K.Slika;
+            }
 
             Liga l = db.FetchDBRefAs<Liga>(K.Liga);
 

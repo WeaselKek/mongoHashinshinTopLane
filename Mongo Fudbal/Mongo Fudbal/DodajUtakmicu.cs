@@ -43,15 +43,37 @@ namespace Mongo_Fudbal
                          where klubovi.Ime == cbxA.Text
                          select klubovi).Single();
 
-            MongoDBRef pom1 = new MongoDBRef("klubovi", home.Id);
-            MongoDBRef pom2 = new MongoDBRef("klubovi", away.Id);
+            MongoDBRef homeref = new MongoDBRef("klubovi", home.Id);
+            MongoDBRef awayref = new MongoDBRef("klubovi", away.Id);
             MongoDBRef liga1 = new MongoDBRef("lige", L.Id);
 
-            Utakmica ut = new Utakmica { Datum = dtp1.Value, Rezultat = golH.Text + ":" + golA.Text, Klub1 = pom1, Klub2 = pom2, Liga = liga1 };
+            Utakmica ut = new Utakmica { Datum = dtp1.Value, Rezultat = golH.Text + ":" + golA.Text, Klub1 = homeref, Klub2 = awayref, Liga = liga1 };
             utakmiceColl.Insert(ut);
 
             L.Utakmice.Add(new MongoDBRef("utakmice", ut.Id));
             ligeColl.Save(L);
+
+            //dodavanje poena klubovima
+
+            Klub homek = db.FetchDBRefAs<Klub>(homeref);
+            Klub awayk = db.FetchDBRefAs<Klub>(awayref);
+
+            if (Int32.Parse(golH.Text) > Int32.Parse(golA.Text))
+            {
+                homek.Bodovi += 3;
+            }
+            else if (Int32.Parse(golH.Text) == Int32.Parse(golA.Text))
+            {
+                homek.Bodovi += 1;
+                awayk.Bodovi += 1;
+            }
+            else
+            {
+                awayk.Bodovi += 3;
+            }
+
+            kluboviColl.Save(homek);
+            kluboviColl.Save(awayk);
 
             this.Close();
         }

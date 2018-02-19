@@ -45,7 +45,7 @@
             // 
             this.btnTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrue.Location = new System.Drawing.Point(98, 393);
-            this.btnTrue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(4);
             this.btnTrue.Name = "btnTrue";
             this.btnTrue.Size = new System.Drawing.Size(111, 38);
             this.btnTrue.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(474, 393);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(108, 38);
             this.btnCancel.TabIndex = 1;
@@ -69,7 +69,7 @@
             this.cbxH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxH.FormattingEnabled = true;
             this.cbxH.Location = new System.Drawing.Point(98, 185);
-            this.cbxH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxH.Margin = new System.Windows.Forms.Padding(4);
             this.cbxH.Name = "cbxH";
             this.cbxH.Size = new System.Drawing.Size(199, 30);
             this.cbxH.TabIndex = 2;
@@ -90,7 +90,7 @@
             this.cbxA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxA.FormattingEnabled = true;
             this.cbxA.Location = new System.Drawing.Point(383, 185);
-            this.cbxA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxA.Margin = new System.Windows.Forms.Padding(4);
             this.cbxA.Name = "cbxA";
             this.cbxA.Size = new System.Drawing.Size(199, 30);
             this.cbxA.TabIndex = 4;
@@ -110,7 +110,7 @@
             // 
             this.dtp1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp1.Location = new System.Drawing.Point(173, 74);
-            this.dtp1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtp1.Margin = new System.Windows.Forms.Padding(4);
             this.dtp1.Name = "dtp1";
             this.dtp1.Size = new System.Drawing.Size(331, 28);
             this.dtp1.TabIndex = 6;
@@ -119,19 +119,21 @@
             // 
             this.golH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.golH.Location = new System.Drawing.Point(245, 239);
-            this.golH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.golH.Margin = new System.Windows.Forms.Padding(4);
             this.golH.Name = "golH";
             this.golH.Size = new System.Drawing.Size(52, 28);
             this.golH.TabIndex = 7;
+            this.golH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // golA
             // 
             this.golA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.golA.Location = new System.Drawing.Point(383, 239);
-            this.golA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.golA.Margin = new System.Windows.Forms.Padding(4);
             this.golA.Name = "golA";
             this.golA.Size = new System.Drawing.Size(52, 28);
             this.golA.TabIndex = 8;
+            this.golA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
@@ -171,7 +173,7 @@
             this.Controls.Add(this.cbxH);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnTrue);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DodajUtakmicu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DodajUtakmicu";

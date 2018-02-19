@@ -53,13 +53,13 @@
             // 
             // lblNazivLige
             // 
-            this.lblNazivLige.AutoSize = true;
-            this.lblNazivLige.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNazivLige.Location = new System.Drawing.Point(248, 39);
+            this.lblNazivLige.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNazivLige.Location = new System.Drawing.Point(12, 39);
             this.lblNazivLige.Name = "lblNazivLige";
-            this.lblNazivLige.Size = new System.Drawing.Size(245, 32);
+            this.lblNazivLige.Size = new System.Drawing.Size(750, 43);
             this.lblNazivLige.TabIndex = 0;
             this.lblNazivLige.Text = "Naziv lige i drzava";
+            this.lblNazivLige.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabLiga
             // 
@@ -187,6 +187,7 @@
             this.dataGridViewTabela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTabela.Size = new System.Drawing.Size(730, 364);
             this.dataGridViewTabela.TabIndex = 4;
+            this.dataGridViewTabela.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewTabela_RowPostPaint);
             // 
             // menuStrip1
             // 

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
+using Mongo_Fudbal.Funkcije;
 
 namespace Mongo_Fudbal
 {
@@ -83,14 +84,9 @@ namespace Mongo_Fudbal
                 Klub klub = db.FetchDBRefAs<Klub>(klubRef);
                 listak.Add(klub);
             }
-            listak.Sort((x, y) => x.Bodovi.CompareTo(y.Bodovi));
+            listak.Sort((x, y) => y.Bodovi.CompareTo(x.Bodovi));
 
             dataGridViewTabela.DataSource = listak;
-
-            foreach (DataGridViewRow row in dataGridViewTabela.Rows)
-            {
-                row.HeaderCell.Value = (row.Index + 1).ToString();
-            }
 
             dataGridViewTabela.Columns["id"].Visible = false;
             dataGridViewTabela.Columns["God_osn"].Visible = false;
@@ -106,6 +102,7 @@ namespace Mongo_Fudbal
                 dataGridViewTabela.Columns["Utakmice"].Visible = false;
             }
 
+            dataGridViewTabela.ClearSelection();
             
         }
 
@@ -158,12 +155,29 @@ namespace Mongo_Fudbal
 
         private void btnIzaberiKlub_Click(object sender, EventArgs e)
         {
+            if (!Provera.chkIfSelected(dataGridViewTabela))
+                return;
             FormKlub formk = new FormKlub();
             Klub k = new Klub();
             k = dataGridViewTabela.CurrentRow.DataBoundItem as Klub;
             formk.K = k;
             formk.ShowDialog();
             UcitajDGVTabela();
+        }
+
+        private void dataGridViewTabela_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
+        {
+            var grid = sender as DataGridView;
+            var rowIdx = (e.RowIndex + 1).ToString();
+
+            var centerFormat = new StringFormat()
+            {
+                Alignment = StringAlignment.Center,
+                LineAlignment = StringAlignment.Center
+            };
+
+            var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height);
+            e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
         }
     }
 }
