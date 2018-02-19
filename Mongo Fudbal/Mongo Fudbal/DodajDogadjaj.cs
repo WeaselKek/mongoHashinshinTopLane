@@ -34,20 +34,23 @@ namespace Mongo_Fudbal
 
             var utakmiceColl = db.GetCollection<Utakmica>("dogadjaji");
             var igraciColl = db.GetCollection<Fudbaler>("igraci");
+            var utakColl = db.GetCollection<Fudbaler>("utakmice");
 
-            Fudbaler home = (from igraci in igraciColl.AsQueryable<Fudbaler>()
+            Fudbaler igrac = (from igraci in igraciColl.AsQueryable<Fudbaler>()
                              where igraci.Ime == cbxIgrac.Text
                              select igraci).Single();
 
 
 
-            MongoDBRef pom1 = new MongoDBRef("igraci", home.Id);
+            MongoDBRef pom1 = new MongoDBRef("igraci", igrac.Id);
+            MongoDBRef pom2 = new MongoDBRef("utakmice", U.Id);
 
 
-            Dogadjaj dog = new Dogadjaj { Minut = Int32.Parse(txtMinut.Text), Tip = cbxTip.Text, Igrac=pom1 };
-
-
+            Dogadjaj dog = new Dogadjaj { Minut = Int32.Parse(txtMinut.Text), Tip = cbxTip.Text, Igrac=pom1,Utakmica=pom2 };
             igraciColl.Insert(dog);
+
+            U.Dogadjaji.Add(pom2);
+            utakmiceColl.Save(U);
             this.Close();
         }
 
