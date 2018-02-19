@@ -25,6 +25,7 @@ namespace Mongo_Fudbal
             InitializeComponent();
         }
 
+
         private void btnTrue_Click(object sender, EventArgs e)
         {
 
@@ -32,24 +33,19 @@ namespace Mongo_Fudbal
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
 
-            var utakmiceColl = db.GetCollection<Utakmica>("dogadjaji");
+            var utakmiceColl = db.GetCollection<Utakmica>("utakmice");
             var igraciColl = db.GetCollection<Fudbaler>("igraci");
-            var utakColl = db.GetCollection<Fudbaler>("utakmice");
+            var dogadjajiColl = db.GetCollection<Dogadjaj>("dogadjaji");
 
-            Fudbaler igrac = (from igraci in igraciColl.AsQueryable<Fudbaler>()
-                             where igraci.Ime == cbxIgrac.Text
-                             select igraci).Single();
-
-
+            Fudbaler igrac = cbxIgrac.SelectedItem as Fudbaler;
 
             MongoDBRef pom1 = new MongoDBRef("igraci", igrac.Id);
             MongoDBRef pom2 = new MongoDBRef("utakmice", U.Id);
 
-
             Dogadjaj dog = new Dogadjaj { Minut = Int32.Parse(txtMinut.Text), Tip = cbxTip.Text, Igrac=pom1,Utakmica=pom2 };
-            igraciColl.Insert(dog);
+            dogadjajiColl.Insert(dog);
 
-            U.Dogadjaji.Add(pom2);
+            U.Dogadjaji.Add(new MongoDBRef("dogadjaji", dog.Id));
             utakmiceColl.Save(U);
             this.Close();
         }
@@ -57,6 +53,41 @@ namespace Mongo_Fudbal
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void DodajDogadjaj_Load(object sender, EventArgs e)
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+            var utakmiceColl = db.GetCollection<Utakmica>("utakmice");
+            var igraciColl = db.GetCollection<Fudbaler>("igraci");
+            var dogadjajiColl = db.GetCollection<Dogadjaj>("dogadjaji");
+            
+
+            var query1 = from fudbaler in igraciColl.AsQueryable<Fudbaler>()
+                         where fudbaler.Klub.Id == U.Klub1.Id
+                         select fudbaler;
+
+            MongoDBRef kref1 = new MongoDBRef("klubovi", U.Klub1.Id);
+            Klub k1 = db.FetchDBRefAs<Klub>(kref1);
+
+            foreach (Fudbaler f in query1)
+            {
+                cbxIgrac.Items.Add(f);
+            }
+
+            var query2 = from fudbaler in igraciColl.AsQueryable<Fudbaler>()
+                         where fudbaler.Klub.Id == U.Klub2.Id
+                         select fudbaler;
+
+            MongoDBRef kref2 = new MongoDBRef("klubovi", U.Klub2.Id);
+            Klub k2 = db.FetchDBRefAs<Klub>(kref2);
+
+            foreach (Fudbaler f in query2)
+            {               
+                cbxIgrac.Items.Add(f);
+            }
         }
     }
 }

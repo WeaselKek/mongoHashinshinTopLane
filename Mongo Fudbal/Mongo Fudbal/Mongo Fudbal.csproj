@@ -89,6 +89,12 @@
     <Compile Include="DodajFudbalera.Designer.cs">
       <DependentUpon>DodajFudbalera.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFudbaler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFudbaler.Designer.cs">
+      <DependentUpon>FormFudbaler.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKlub.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DodajFudbalera.resx">
       <DependentUpon>DodajFudbalera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFudbaler.resx">
+      <DependentUpon>FormFudbaler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKlub.resx">
+      <DependentUpon>FormKlub.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLiga.resx">
       <DependentUpon>FormLiga.cs</DependentUpon>

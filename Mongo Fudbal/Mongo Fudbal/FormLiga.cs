@@ -83,7 +83,6 @@ namespace Mongo_Fudbal
                 Klub klub = db.FetchDBRefAs<Klub>(klubRef);
                 listak.Add(klub);
             }
-
             listak.Sort((x, y) => x.Bodovi.CompareTo(y.Bodovi));
 
             dataGridViewTabela.DataSource = listak;
@@ -106,6 +105,8 @@ namespace Mongo_Fudbal
             {
                 dataGridViewTabela.Columns["Utakmice"].Visible = false;
             }
+
+            
         }
 
         private void tabLiga_SelectedIndexChanged(object sender, EventArgs e)
@@ -153,6 +154,16 @@ namespace Mongo_Fudbal
             uform.U = u;
             uform.ShowDialog();
             UcitajDGVUtakmice();
+        }
+
+        private void btnIzaberiKlub_Click(object sender, EventArgs e)
+        {
+            FormKlub formk = new FormKlub();
+            Klub k = new Klub();
+            k = dataGridViewTabela.CurrentRow.DataBoundItem as Klub;
+            formk.K = k;
+            formk.ShowDialog();
+            UcitajDGVTabela();
         }
     }
 }

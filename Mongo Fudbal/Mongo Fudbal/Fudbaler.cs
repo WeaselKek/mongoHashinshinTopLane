@@ -19,5 +19,12 @@ namespace Mongo_Fudbal
         public string Drzava { get; set; }
         public MongoDBRef Klub { get; set; }
         public int Broj_gol { get; set; }
+
+        public override string ToString()
+        {
+            return Ime + " " + Prezime;
+        }
     }
+
+
 }

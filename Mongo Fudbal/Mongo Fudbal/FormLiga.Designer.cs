@@ -35,6 +35,7 @@
             this.lblNazivLige = new System.Windows.Forms.Label();
             this.tabLiga = new System.Windows.Forms.TabControl();
             this.tabUtakmice = new System.Windows.Forms.TabPage();
+            this.btnIzaberiUtakmicu = new System.Windows.Forms.Button();
             this.dataGridViewUtakmice = new System.Windows.Forms.DataGridView();
             this.btnDodajUtakmicu = new System.Windows.Forms.Button();
             this.tabTabela = new System.Windows.Forms.TabPage();
@@ -42,7 +43,6 @@
             this.dataGridViewTabela = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dodajKlubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnIzaberiUtakmicu = new System.Windows.Forms.Button();
             this.tabLiga.SuspendLayout();
             this.tabUtakmice.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUtakmice)).BeginInit();
@@ -85,6 +85,16 @@
             this.tabUtakmice.TabIndex = 1;
             this.tabUtakmice.Text = "Utakmice";
             this.tabUtakmice.UseVisualStyleBackColor = true;
+            // 
+            // btnIzaberiUtakmicu
+            // 
+            this.btnIzaberiUtakmicu.Location = new System.Drawing.Point(217, 388);
+            this.btnIzaberiUtakmicu.Name = "btnIzaberiUtakmicu";
+            this.btnIzaberiUtakmicu.Size = new System.Drawing.Size(180, 35);
+            this.btnIzaberiUtakmicu.TabIndex = 4;
+            this.btnIzaberiUtakmicu.Text = "Izaberi utakmicu";
+            this.btnIzaberiUtakmicu.UseVisualStyleBackColor = true;
+            this.btnIzaberiUtakmicu.Click += new System.EventHandler(this.btnIzaberiUtakmicu_Click);
             // 
             // dataGridViewUtakmice
             // 
@@ -146,6 +156,7 @@
             this.btnIzaberiKlub.TabIndex = 5;
             this.btnIzaberiKlub.Text = "Izaberi klub";
             this.btnIzaberiKlub.UseVisualStyleBackColor = true;
+            this.btnIzaberiKlub.Click += new System.EventHandler(this.btnIzaberiKlub_Click);
             // 
             // dataGridViewTabela
             // 
@@ -171,6 +182,7 @@
             this.dataGridViewTabela.Name = "dataGridViewTabela";
             this.dataGridViewTabela.ReadOnly = true;
             this.dataGridViewTabela.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridViewTabela.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewTabela.RowTemplate.Height = 28;
             this.dataGridViewTabela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewTabela.Size = new System.Drawing.Size(730, 364);
@@ -193,16 +205,6 @@
             this.dodajKlubToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.dodajKlubToolStripMenuItem.Text = "Dodaj klub";
             this.dodajKlubToolStripMenuItem.Click += new System.EventHandler(this.dodajKlubToolStripMenuItem_Click);
-            // 
-            // btnIzaberiUtakmicu
-            // 
-            this.btnIzaberiUtakmicu.Location = new System.Drawing.Point(217, 388);
-            this.btnIzaberiUtakmicu.Name = "btnIzaberiUtakmicu";
-            this.btnIzaberiUtakmicu.Size = new System.Drawing.Size(180, 35);
-            this.btnIzaberiUtakmicu.TabIndex = 4;
-            this.btnIzaberiUtakmicu.Text = "Izaberi utakmicu";
-            this.btnIzaberiUtakmicu.UseVisualStyleBackColor = true;
-            this.btnIzaberiUtakmicu.Click += new System.EventHandler(this.btnIzaberiUtakmicu_Click);
             // 
             // FormLiga
             // 

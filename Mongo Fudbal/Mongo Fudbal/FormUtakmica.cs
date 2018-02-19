@@ -20,6 +20,34 @@ namespace Mongo_Fudbal
             InitializeComponent();
         }
 
+        private void UcitajListBoxDogadjaji()
+        {
+            var connectionString = "mongodb://localhost/?safe=true";
+            var server = MongoServer.Create(connectionString);
+            var db = server.GetDatabase("fudbal");
+
+            List<Dogadjaj> listad = new List<Dogadjaj>();
+
+            foreach (MongoDBRef dogRef in U.Dogadjaji.ToList())
+            {
+                Dogadjaj d = db.FetchDBRefAs<Dogadjaj>(dogRef);
+                listad.Add(d);
+            }
+
+            listad.Sort((x, y) => x.Minut.CompareTo(y.Minut));
+
+            
+
+            foreach (Dogadjaj d in listad)
+            {
+                MongoDBRef fRef = new MongoDBRef("igraci", d.Igrac.Id);
+                Fudbaler f = db.FetchDBRefAs<Fudbaler>(fRef);
+                String s = d.Minut + "'  " + d.Tip + "   " + f.Ime + " " + f.Prezime;
+                listBoxDogadjaji.Items.Add(s);
+            }
+
+        }
+
         private void FormUtakmica_Load(object sender, EventArgs e)
         {
             var connectionString = "mongodb://localhost/?safe=true";
@@ -35,6 +63,9 @@ namespace Mongo_Fudbal
             lblGost.Text = klub2.Ime;
             lblRezultat.Text = U.Rezultat;
             lblStadion.Text = "Stadion: " + klub1.Stadion;
+
+            UcitajListBoxDogadjaji();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -42,6 +73,7 @@ namespace Mongo_Fudbal
             DodajDogadjaj ddform = new DodajDogadjaj();
             ddform.U = this.U;
             ddform.ShowDialog();
+            UcitajListBoxDogadjaji();
 
         }
     }

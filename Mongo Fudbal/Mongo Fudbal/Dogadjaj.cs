@@ -18,6 +18,5 @@ namespace Mongo_Fudbal
         public MongoDBRef Utakmica { get; set; }
         public MongoDBRef Igrac { get; set; }
 
-
     }
 }

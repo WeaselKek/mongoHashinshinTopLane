@@ -40,7 +40,7 @@ namespace Mongo_Fudbal
                          select klubovi).Single();
 
             Klub away = (from klubovi in kluboviColl.AsQueryable<Klub>()
-                         where klubovi.Ime == cbxH.Text
+                         where klubovi.Ime == cbxA.Text
                          select klubovi).Single();
 
             MongoDBRef pom1 = new MongoDBRef("klubovi", home.Id);
