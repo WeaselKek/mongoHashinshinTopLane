@@ -126,7 +126,7 @@
             this.Controls.Add(this.txtMinut);
             this.Name = "DodajDogadjaj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DodajDogadjaj";
+            this.Text = "Dogadjaj";
             this.Load += new System.EventHandler(this.DodajDogadjaj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

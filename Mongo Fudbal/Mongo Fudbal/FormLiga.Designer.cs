@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblNazivLige = new System.Windows.Forms.Label();
             this.tabLiga = new System.Windows.Forms.TabControl();
             this.tabUtakmice = new System.Windows.Forms.TabPage();
@@ -56,9 +56,10 @@
             // lblNazivLige
             // 
             this.lblNazivLige.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNazivLige.Location = new System.Drawing.Point(12, 39);
+            this.lblNazivLige.Location = new System.Drawing.Point(9, 32);
+            this.lblNazivLige.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNazivLige.Name = "lblNazivLige";
-            this.lblNazivLige.Size = new System.Drawing.Size(750, 43);
+            this.lblNazivLige.Size = new System.Drawing.Size(562, 35);
             this.lblNazivLige.TabIndex = 0;
             this.lblNazivLige.Text = "Naziv lige i drzava";
             this.lblNazivLige.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,10 +69,11 @@
             this.tabLiga.Controls.Add(this.tabUtakmice);
             this.tabLiga.Controls.Add(this.tabTabela);
             this.tabLiga.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabLiga.Location = new System.Drawing.Point(12, 98);
+            this.tabLiga.Location = new System.Drawing.Point(9, 80);
+            this.tabLiga.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabLiga.Name = "tabLiga";
             this.tabLiga.SelectedIndex = 0;
-            this.tabLiga.Size = new System.Drawing.Size(750, 478);
+            this.tabLiga.Size = new System.Drawing.Size(562, 388);
             this.tabLiga.TabIndex = 1;
             this.tabLiga.SelectedIndexChanged += new System.EventHandler(this.tabLiga_SelectedIndexChanged);
             // 
@@ -81,10 +83,11 @@
             this.tabUtakmice.Controls.Add(this.btnIzaberiUtakmicu);
             this.tabUtakmice.Controls.Add(this.dataGridViewUtakmice);
             this.tabUtakmice.Controls.Add(this.btnDodajUtakmicu);
-            this.tabUtakmice.Location = new System.Drawing.Point(4, 29);
+            this.tabUtakmice.Location = new System.Drawing.Point(4, 26);
+            this.tabUtakmice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabUtakmice.Name = "tabUtakmice";
-            this.tabUtakmice.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUtakmice.Size = new System.Drawing.Size(742, 445);
+            this.tabUtakmice.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabUtakmice.Size = new System.Drawing.Size(554, 358);
             this.tabUtakmice.TabIndex = 1;
             this.tabUtakmice.Text = "Utakmice";
             this.tabUtakmice.UseVisualStyleBackColor = true;
@@ -92,18 +95,20 @@
             // btnDeleteU
             // 
             this.btnDeleteU.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeleteU.Location = new System.Drawing.Point(691, 385);
+            this.btnDeleteU.Location = new System.Drawing.Point(518, 313);
+            this.btnDeleteU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteU.Name = "btnDeleteU";
-            this.btnDeleteU.Size = new System.Drawing.Size(45, 45);
+            this.btnDeleteU.Size = new System.Drawing.Size(34, 37);
             this.btnDeleteU.TabIndex = 7;
             this.btnDeleteU.UseVisualStyleBackColor = true;
             this.btnDeleteU.Click += new System.EventHandler(this.btnDeleteU_Click);
             // 
             // btnIzaberiUtakmicu
             // 
-            this.btnIzaberiUtakmicu.Location = new System.Drawing.Point(207, 385);
+            this.btnIzaberiUtakmicu.Location = new System.Drawing.Point(155, 313);
+            this.btnIzaberiUtakmicu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIzaberiUtakmicu.Name = "btnIzaberiUtakmicu";
-            this.btnIzaberiUtakmicu.Size = new System.Drawing.Size(180, 45);
+            this.btnIzaberiUtakmicu.Size = new System.Drawing.Size(135, 37);
             this.btnIzaberiUtakmicu.TabIndex = 4;
             this.btnIzaberiUtakmicu.Text = "Prikazi utakmicu";
             this.btnIzaberiUtakmicu.UseVisualStyleBackColor = true;
@@ -114,21 +119,22 @@
             this.dataGridViewUtakmice.AllowUserToAddRows = false;
             this.dataGridViewUtakmice.AllowUserToDeleteRows = false;
             this.dataGridViewUtakmice.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewUtakmice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewUtakmice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewUtakmice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewUtakmice.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewUtakmice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewUtakmice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewUtakmice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewUtakmice.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridViewUtakmice.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewUtakmice.Location = new System.Drawing.Point(4, 5);
+            this.dataGridViewUtakmice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewUtakmice.MultiSelect = false;
             this.dataGridViewUtakmice.Name = "dataGridViewUtakmice";
             this.dataGridViewUtakmice.ReadOnly = true;
@@ -136,14 +142,15 @@
             this.dataGridViewUtakmice.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridViewUtakmice.RowTemplate.Height = 28;
             this.dataGridViewUtakmice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewUtakmice.Size = new System.Drawing.Size(730, 364);
+            this.dataGridViewUtakmice.Size = new System.Drawing.Size(548, 296);
             this.dataGridViewUtakmice.TabIndex = 3;
             // 
             // btnDodajUtakmicu
             // 
-            this.btnDodajUtakmicu.Location = new System.Drawing.Point(6, 385);
+            this.btnDodajUtakmicu.Location = new System.Drawing.Point(4, 313);
+            this.btnDodajUtakmicu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDodajUtakmicu.Name = "btnDodajUtakmicu";
-            this.btnDodajUtakmicu.Size = new System.Drawing.Size(180, 45);
+            this.btnDodajUtakmicu.Size = new System.Drawing.Size(135, 37);
             this.btnDodajUtakmicu.TabIndex = 1;
             this.btnDodajUtakmicu.Text = "Dodaj utakmicu";
             this.btnDodajUtakmicu.UseVisualStyleBackColor = true;
@@ -154,10 +161,11 @@
             this.tabTabela.Controls.Add(this.btnDelete);
             this.tabTabela.Controls.Add(this.btnIzaberiKlub);
             this.tabTabela.Controls.Add(this.dataGridViewTabela);
-            this.tabTabela.Location = new System.Drawing.Point(4, 29);
+            this.tabTabela.Location = new System.Drawing.Point(4, 26);
+            this.tabTabela.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabTabela.Name = "tabTabela";
-            this.tabTabela.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTabela.Size = new System.Drawing.Size(742, 445);
+            this.tabTabela.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabTabela.Size = new System.Drawing.Size(554, 358);
             this.tabTabela.TabIndex = 2;
             this.tabTabela.Text = "Tabela";
             this.tabTabela.UseVisualStyleBackColor = true;
@@ -165,18 +173,20 @@
             // btnDelete
             // 
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(202, 376);
+            this.btnDelete.Location = new System.Drawing.Point(152, 306);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(45, 45);
+            this.btnDelete.Size = new System.Drawing.Size(34, 37);
             this.btnDelete.TabIndex = 6;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnIzaberiKlub
             // 
-            this.btnIzaberiKlub.Location = new System.Drawing.Point(6, 376);
+            this.btnIzaberiKlub.Location = new System.Drawing.Point(4, 306);
+            this.btnIzaberiKlub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIzaberiKlub.Name = "btnIzaberiKlub";
-            this.btnIzaberiKlub.Size = new System.Drawing.Size(180, 45);
+            this.btnIzaberiKlub.Size = new System.Drawing.Size(135, 37);
             this.btnIzaberiKlub.TabIndex = 5;
             this.btnIzaberiKlub.Text = "Izaberi klub";
             this.btnIzaberiKlub.UseVisualStyleBackColor = true;
@@ -187,21 +197,22 @@
             this.dataGridViewTabela.AllowUserToAddRows = false;
             this.dataGridViewTabela.AllowUserToDeleteRows = false;
             this.dataGridViewTabela.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTabela.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTabela.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewTabela.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTabela.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTabela.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTabela.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTabela.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridViewTabela.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewTabela.Location = new System.Drawing.Point(4, 5);
+            this.dataGridViewTabela.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewTabela.MultiSelect = false;
             this.dataGridViewTabela.Name = "dataGridViewTabela";
             this.dataGridViewTabela.ReadOnly = true;
@@ -209,7 +220,7 @@
             this.dataGridViewTabela.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewTabela.RowTemplate.Height = 28;
             this.dataGridViewTabela.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewTabela.Size = new System.Drawing.Size(730, 364);
+            this.dataGridViewTabela.Size = new System.Drawing.Size(548, 296);
             this.dataGridViewTabela.TabIndex = 4;
             this.dataGridViewTabela.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dataGridViewTabela_RowPostPaint);
             // 
@@ -220,29 +231,31 @@
             this.dodajKlubToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(774, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(580, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // dodajKlubToolStripMenuItem
             // 
             this.dodajKlubToolStripMenuItem.Name = "dodajKlubToolStripMenuItem";
-            this.dodajKlubToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.dodajKlubToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.dodajKlubToolStripMenuItem.Text = "Dodaj klub";
             this.dodajKlubToolStripMenuItem.Click += new System.EventHandler(this.dodajKlubToolStripMenuItem_Click);
             // 
             // FormLiga
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 587);
+            this.ClientSize = new System.Drawing.Size(580, 477);
             this.Controls.Add(this.tabLiga);
             this.Controls.Add(this.lblNazivLige);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormLiga";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormLiga";
+            this.Text = "Liga";
             this.Load += new System.EventHandler(this.FormLiga_Load);
             this.tabLiga.ResumeLayout(false);
             this.tabUtakmice.ResumeLayout(false);

@@ -39,7 +39,7 @@
             // 
             this.txtNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNaziv.Location = new System.Drawing.Point(65, 72);
-            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2);
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(185, 24);
             this.txtNaziv.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.txtDrzava.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDrzava.Location = new System.Drawing.Point(65, 146);
-            this.txtDrzava.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDrzava.Margin = new System.Windows.Forms.Padding(2);
             this.txtDrzava.Name = "txtDrzava";
             this.txtDrzava.Size = new System.Drawing.Size(185, 24);
             this.txtDrzava.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             this.btnTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrue.Location = new System.Drawing.Point(120, 201);
-            this.btnTrue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(2);
             this.btnTrue.Name = "btnTrue";
             this.btnTrue.Size = new System.Drawing.Size(74, 32);
             this.btnTrue.TabIndex = 4;
@@ -103,10 +103,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDrzava);
             this.Controls.Add(this.txtNaziv);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DodajLigu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DodajLigu";
+            this.Text = "Liga";
             this.Load += new System.EventHandler(this.DodajLigu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

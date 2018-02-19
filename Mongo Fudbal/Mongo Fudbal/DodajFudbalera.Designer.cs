@@ -168,7 +168,7 @@
             this.Controls.Add(this.txbIme);
             this.Name = "DodajFudbalera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormFudbaler";
+            this.Text = "Fudbaler";
             this.Load += new System.EventHandler(this.DodajFudbalera_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

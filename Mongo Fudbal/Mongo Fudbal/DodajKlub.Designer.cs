@@ -46,7 +46,7 @@
             // 
             this.txtNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNaziv.Location = new System.Drawing.Point(44, 53);
-            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2);
             this.txtNaziv.Name = "txtNaziv";
             this.txtNaziv.Size = new System.Drawing.Size(260, 24);
             this.txtNaziv.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             this.txtGrad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrad.Location = new System.Drawing.Point(44, 124);
-            this.txtGrad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGrad.Margin = new System.Windows.Forms.Padding(2);
             this.txtGrad.Name = "txtGrad";
             this.txtGrad.Size = new System.Drawing.Size(260, 24);
             this.txtGrad.TabIndex = 1;
@@ -64,7 +64,7 @@
             // 
             this.txtStadion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStadion.Location = new System.Drawing.Point(44, 195);
-            this.txtStadion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStadion.Margin = new System.Windows.Forms.Padding(2);
             this.txtStadion.Name = "txtStadion";
             this.txtStadion.Size = new System.Drawing.Size(260, 24);
             this.txtStadion.TabIndex = 2;
@@ -117,7 +117,7 @@
             // 
             this.txtGodina.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGodina.Location = new System.Drawing.Point(44, 265);
-            this.txtGodina.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGodina.Margin = new System.Windows.Forms.Padding(2);
             this.txtGodina.Name = "txtGodina";
             this.txtGodina.Size = new System.Drawing.Size(118, 24);
             this.txtGodina.TabIndex = 8;
@@ -127,7 +127,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(106, 394);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 35);
             this.button1.TabIndex = 9;
@@ -143,7 +143,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(44, 315);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 27);
             this.button2.TabIndex = 10;
@@ -177,10 +177,10 @@
             this.Controls.Add(this.txtStadion);
             this.Controls.Add(this.txtGrad);
             this.Controls.Add(this.txtNaziv);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DodajKlub";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DodajKlub";
+            this.Text = "Klub";
             this.Load += new System.EventHandler(this.DodajKlub_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

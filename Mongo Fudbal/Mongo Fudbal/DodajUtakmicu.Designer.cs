@@ -156,7 +156,7 @@
             this.Controls.Add(this.btnTrue);
             this.Name = "DodajUtakmicu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DodajUtakmicu";
+            this.Text = "Utakmica";
             this.Load += new System.EventHandler(this.DodajUtakmicu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

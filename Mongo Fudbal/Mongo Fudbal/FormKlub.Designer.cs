@@ -104,7 +104,7 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Location = new System.Drawing.Point(386, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 126);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +115,7 @@
             // 
             this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodaj.Location = new System.Drawing.Point(36, 411);
-            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(116, 31);
             this.btnDodaj.TabIndex = 7;
@@ -151,7 +151,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewIgraci.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewIgraci.Location = new System.Drawing.Point(36, 212);
-            this.dataGridViewIgraci.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewIgraci.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewIgraci.MultiSelect = false;
             this.dataGridViewIgraci.Name = "dataGridViewIgraci";
             this.dataGridViewIgraci.ReadOnly = true;
@@ -166,7 +166,7 @@
             // 
             this.btnVidi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVidi.Location = new System.Drawing.Point(170, 411);
-            this.btnVidi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVidi.Margin = new System.Windows.Forms.Padding(2);
             this.btnVidi.Name = "btnVidi";
             this.btnVidi.Size = new System.Drawing.Size(116, 31);
             this.btnVidi.TabIndex = 9;
@@ -200,10 +200,10 @@
             this.Controls.Add(this.lblGodina);
             this.Controls.Add(this.lblGrad);
             this.Controls.Add(this.lblNaziv);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormKlub";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormKlub";
+            this.Text = "Klub";
             this.Load += new System.EventHandler(this.FormKlub_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewIgraci)).EndInit();
