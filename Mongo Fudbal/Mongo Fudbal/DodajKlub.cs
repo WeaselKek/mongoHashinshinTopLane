@@ -47,6 +47,14 @@ namespace Mongo_Fudbal
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //validacija
+            if ((txtNaziv.Text == "") || (txtGrad.Text == "") || (txtStadion.Text == "") || (txtGodina.Text == ""))
+            {
+                MessageBox.Show("Niste uneli sva potrebna polja");
+                return;
+            }
+
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
@@ -89,6 +97,14 @@ namespace Mongo_Fudbal
         private void DodajKlub_Load(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
+        }
+
+        private void txtGodina_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

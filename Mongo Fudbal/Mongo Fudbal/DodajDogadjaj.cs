@@ -28,6 +28,19 @@ namespace Mongo_Fudbal
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
+            //validacija
+            if ((txtMinut.Text == "") || (cbxTip.Text == "") || (cbxIgrac.Text == ""))
+            {
+                MessageBox.Show("Niste uneli sva potrebna polja");
+                return;
+            }
+
+            int minuti = Int32.Parse(txtMinut.Text);
+            if (minuti<1 || minuti>100)
+            {
+                MessageBox.Show("Nevalidan minut");
+                return;
+            }
 
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
@@ -42,7 +55,7 @@ namespace Mongo_Fudbal
             MongoDBRef pom1 = new MongoDBRef("igraci", igrac.Id);
             MongoDBRef pom2 = new MongoDBRef("utakmice", U.Id);
 
-            Dogadjaj dog = new Dogadjaj { Minut = Int32.Parse(txtMinut.Text), Tip = cbxTip.Text, Igrac=pom1,Utakmica=pom2 };
+            Dogadjaj dog = new Dogadjaj { Minut = minuti, Tip = cbxTip.Text, Igrac=pom1,Utakmica=pom2 };
             dogadjajiColl.Insert(dog);
 
             U.Dogadjaji.Add(new MongoDBRef("dogadjaji", dog.Id));
@@ -64,6 +77,9 @@ namespace Mongo_Fudbal
 
         private void DodajDogadjaj_Load(object sender, EventArgs e)
         {
+
+
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
@@ -94,6 +110,14 @@ namespace Mongo_Fudbal
             foreach (Fudbaler f in query2)
             {               
                 cbxIgrac.Items.Add(f);
+            }
+        }
+
+        private void txtMinut_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

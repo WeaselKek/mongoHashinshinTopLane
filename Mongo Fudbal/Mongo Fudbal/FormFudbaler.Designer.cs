@@ -36,7 +36,6 @@
             this.lblKlub = new System.Windows.Forms.Label();
             this.lblGod = new System.Windows.Forms.Label();
             this.lblDrz = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGolovi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -45,10 +44,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 229);
+            this.label3.Location = new System.Drawing.Point(65, 229);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 25);
+            this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Broj Golova:";
             // 
@@ -59,47 +58,47 @@
             this.lblIme.Location = new System.Drawing.Point(27, 27);
             this.lblIme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIme.Name = "lblIme";
-            this.lblIme.Size = new System.Drawing.Size(99, 36);
+            this.lblIme.Size = new System.Drawing.Size(85, 29);
             this.lblIme.TabIndex = 3;
             this.lblIme.Text = "lblIme";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 183);
+            this.label5.Location = new System.Drawing.Point(116, 174);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 25);
+            this.label5.Size = new System.Drawing.Size(44, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Klub:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 140);
+            this.label6.Location = new System.Drawing.Point(35, 140);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 25);
+            this.label6.Size = new System.Drawing.Size(125, 20);
             this.label6.TabIndex = 5;
             this.label6.Text = "Godina rodjenja:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(24, 101);
+            this.label7.Location = new System.Drawing.Point(97, 101);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 25);
+            this.label7.Size = new System.Drawing.Size(63, 20);
             this.label7.TabIndex = 6;
             this.label7.Text = "Drzava:";
             // 
             // lblKlub
             // 
             this.lblKlub.AutoSize = true;
-            this.lblKlub.Location = new System.Drawing.Point(90, 183);
+            this.lblKlub.Location = new System.Drawing.Point(194, 174);
             this.lblKlub.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKlub.Name = "lblKlub";
-            this.lblKlub.Size = new System.Drawing.Size(71, 25);
+            this.lblKlub.Size = new System.Drawing.Size(55, 20);
             this.lblKlub.TabIndex = 9;
             this.lblKlub.Text = "lblKlub";
             // 
@@ -109,29 +108,19 @@
             this.lblGod.Location = new System.Drawing.Point(194, 140);
             this.lblGod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGod.Name = "lblGod";
-            this.lblGod.Size = new System.Drawing.Size(68, 25);
+            this.lblGod.Size = new System.Drawing.Size(55, 20);
             this.lblGod.TabIndex = 10;
             this.lblGod.Text = "lblGod";
             // 
             // lblDrz
             // 
             this.lblDrz.AutoSize = true;
-            this.lblDrz.Location = new System.Drawing.Point(112, 101);
+            this.lblDrz.Location = new System.Drawing.Point(194, 101);
             this.lblDrz.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDrz.Name = "lblDrz";
-            this.lblDrz.Size = new System.Drawing.Size(61, 25);
+            this.lblDrz.Size = new System.Drawing.Size(49, 20);
             this.lblDrz.TabIndex = 11;
             this.lblDrz.Text = "lblDrz";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(29, 312);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(131, 37);
-            this.btnUpdate.TabIndex = 12;
-            this.btnUpdate.Text = "Azuriraj";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // pictureBox1
             // 
@@ -145,21 +134,20 @@
             // lblGolovi
             // 
             this.lblGolovi.AutoSize = true;
-            this.lblGolovi.Location = new System.Drawing.Point(151, 229);
+            this.lblGolovi.Location = new System.Drawing.Point(194, 229);
             this.lblGolovi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGolovi.Name = "lblGolovi";
-            this.lblGolovi.Size = new System.Drawing.Size(86, 25);
+            this.lblGolovi.Size = new System.Drawing.Size(68, 20);
             this.lblGolovi.TabIndex = 14;
             this.lblGolovi.Text = "lblGolovi";
             // 
             // FormFudbaler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 428);
             this.Controls.Add(this.lblGolovi);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.lblDrz);
             this.Controls.Add(this.lblGod);
             this.Controls.Add(this.lblKlub);
@@ -188,7 +176,6 @@
         private System.Windows.Forms.Label lblKlub;
         private System.Windows.Forms.Label lblGod;
         private System.Windows.Forms.Label lblDrz;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblGolovi;
     }

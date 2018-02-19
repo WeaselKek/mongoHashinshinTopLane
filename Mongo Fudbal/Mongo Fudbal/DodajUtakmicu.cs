@@ -27,6 +27,20 @@ namespace Mongo_Fudbal
 
         private void btnTrue_Click(object sender, EventArgs e)
         {
+            //validacija
+            if ((cbxH.Text == "") || (cbxA.Text == "") || (golH.Text == "") || (golA.Text == ""))
+            {
+                MessageBox.Show("Niste uneli sva potrebna polja");
+                return;
+            }
+
+             if (cbxH.Text ==cbxA.Text )
+             {
+                 MessageBox.Show("Izaberiite dva razlicita kluba");
+                 return;
+             }
+
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
@@ -95,6 +109,22 @@ namespace Mongo_Fudbal
                 cbxH.Items.Add(klub.Ime);
                 cbxA.Items.Add(klub.Ime);
             }          
+        }
+
+        private void golH_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void golA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

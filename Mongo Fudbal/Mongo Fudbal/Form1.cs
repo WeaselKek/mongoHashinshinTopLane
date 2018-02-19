@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using System.Configuration;
+using Mongo_Fudbal.Funkcije;
 
 using MongoDB.Driver;
 using MongoDB.Bson;
@@ -72,6 +73,9 @@ namespace Mongo_Fudbal
 
         private void btnIzaberi_Click(object sender, EventArgs e)
         {
+            if (!Provera.chkIfSelected(dataGridView1))
+                return;
+
             Liga l = dataGridView1.CurrentRow.DataBoundItem as Liga;
             FormLiga lform = new FormLiga();
             lform.L = l;
@@ -82,6 +86,9 @@ namespace Mongo_Fudbal
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (!Provera.chkIfSelected(dataGridView1))
+                return;
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");

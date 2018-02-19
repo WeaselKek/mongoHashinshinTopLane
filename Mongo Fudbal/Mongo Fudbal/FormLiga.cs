@@ -146,6 +146,8 @@ namespace Mongo_Fudbal
 
         private void btnIzaberiUtakmicu_Click(object sender, EventArgs e)
         {
+            if (!Provera.chkIfSelected(dataGridViewUtakmice))
+                return;
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
@@ -189,6 +191,9 @@ namespace Mongo_Fudbal
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (!Provera.chkIfSelected(dataGridViewTabela))
+                return;
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
@@ -199,7 +204,7 @@ namespace Mongo_Fudbal
             Klub k = dataGridViewTabela.CurrentRow.DataBoundItem as Klub;
             if (k.Igraci.Count > 0 || k.Utakmice.Count > 0)
             {
-                MessageBox.Show("Ne moze da se obrise klub koji sadrzi igrace i utakmice");
+                MessageBox.Show("Ne moze da se obrise klub koji sadrzi igrace i/ili utakmice");
                 return;
             }
             else

@@ -24,6 +24,13 @@ namespace Mongo_Fudbal
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //validacija
+            if ((txtNaziv.Text == "") || (txtDrzava.Text == ""))
+            {
+                MessageBox.Show("Niste uneli sva potrebna polja");
+                return;
+            }
+
             string naziv = txtNaziv.Text;
             string drzava = txtDrzava.Text;
 

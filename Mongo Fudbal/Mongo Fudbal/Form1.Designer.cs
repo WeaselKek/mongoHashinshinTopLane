@@ -48,14 +48,14 @@
             this.dodajToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(983, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(988, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // dodajToolStripMenuItem
             // 
             this.dodajToolStripMenuItem.Name = "dodajToolStripMenuItem";
-            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.dodajToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.dodajToolStripMenuItem.Text = "Dodaj ligu";
             this.dodajToolStripMenuItem.Click += new System.EventHandler(this.dodajToolStripMenuItem_Click);
             // 
@@ -106,7 +106,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(380, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 32);
+            this.label1.Size = new System.Drawing.Size(173, 26);
             this.label1.TabIndex = 3;
             this.label1.Text = "Fudbalske lige:";
             // 
@@ -143,7 +143,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(983, 629);
+            this.ClientSize = new System.Drawing.Size(988, 617);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnIzaberi);
             this.Controls.Add(this.label1);
