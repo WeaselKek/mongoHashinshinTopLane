@@ -1,0 +1,1916 @@
+use fudbal
+
+db.lige.insert({
+    "_id" : ObjectId("5a8b4a8b25a75028b0d781fc"),
+    "Ime" : "Premier League",
+    "Drzava" : "Engleska",
+    "Klubovi" : [ 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b4b3b25a7501ec4ada513")
+        }, 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b4d5925a7500b449ba0d0")
+        }, 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b4e4425a7500b449ba0d4")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b4fed25a750258049858a")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b502e25a7502580498590")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b509f25a750258049859a")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b50b725a750258049859b")
+        }
+    ]
+});
+
+db.lige.insert({
+    "_id" : ObjectId("5a8b515025a75025804985a1"),
+    "Ime" : "Super liga",
+    "Drzava" : "Srbija",
+    "Klubovi" : [ 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b53f625a75025804985a2")
+        }, 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b546b25a75025804985a6")
+        }, 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b551025a75025804985aa")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b558525a75025804985ae")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b55d425a75025804985b5")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b55ff25a75025804985ba")
+        }
+    ]
+});
+
+
+db.lige.insert({
+    "_id" : ObjectId("5a8b568425a75025804985c2"),
+    "Ime" : "La Liga",
+    "Drzava" : "Spanija",
+    "Klubovi" : [ 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b583f25a75025804985c3")
+        }, 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b58a525a75025804985c7")
+        }, 
+        {
+            "$ref" : "klubovi",
+            "$id" : ObjectId("5a8b591825a75025804985cb")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b598425a75025804985cf")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b598b25a75025804985d0")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b599325a75025804985d1")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b599e25a75025804985d2")
+        }
+    ]
+});
+
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b4b3b25a7501ec4ada513"),
+    "Ime" : "Manchester United",
+    "God_osn" : 1910,
+    "Grad" : "Manchester",
+    "Bodovi" : 5,
+    "Stadion" : "Old Traford",
+    "Slika" : "../../slike/Klubovi\\5a8b4b3b25a7501ec4ada513.png",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b4a8b25a75028b0d781fc")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4bea25a7501ec4ada514")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4c1125a7501ec4ada515")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4c3425a7501ec4ada516")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b4fed25a750258049858a")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b509f25a750258049859a")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b50b725a750258049859b")
+        }
+    ]
+});
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b4d5925a7500b449ba0d0"),
+    "Ime" : "Chelsea",
+    "God_osn" : 1905,
+    "Grad" : "London",
+    "Bodovi" : 2,
+    "Stadion" : "Stantford Bridge",
+    "Slika" : "../../slike/Klubovi\\5a8b4d5925a7500b449ba0d0.png",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b4a8b25a75028b0d781fc")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4ddb25a7500b449ba0d1")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4df425a7500b449ba0d2")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4e0a25a7500b449ba0d3")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b4fed25a750258049858a")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b502e25a7502580498590")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b50b725a750258049859b")
+        }
+    ]
+});
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b4e4425a7500b449ba0d4"),
+    "Ime" : "Liverpool",
+    "God_osn" : 1905,
+    "Grad" : "Liverpool",
+    "Bodovi" : 2,
+    "Stadion" : "Anfield Road",
+    "Slika" : "../../slike/Klubovi\\5a8b4e4425a7500b449ba0d4.png",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b4a8b25a75028b0d781fc")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4ecb25a7500b449ba0d5")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4eeb25a7500b449ba0d6")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b4f0025a7500b449ba0d7")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b502e25a7502580498590")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b509f25a750258049859a")
+        }
+    ]
+});
+
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b53f625a75025804985a2"),
+    "Ime" : "Partizan",
+    "God_osn" : 1945,
+    "Grad" : "Beograd",
+    "Bodovi" : 4,
+    "Stadion" : "Stadion Partizana",
+    "Slika" : "../../slike/Klubovi\\5a8b53f625a75025804985a2.jpg",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b515025a75025804985a1")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b541625a75025804985a3")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b543025a75025804985a4")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b544e25a75025804985a5")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b558525a75025804985ae")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b55d425a75025804985b5")
+        }
+    ]
+});
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b546b25a75025804985a6"),
+    "Ime" : "Crvena Zvezda",
+    "God_osn" : 1945,
+    "Grad" : "Beograd",
+    "Bodovi" : 4,
+    "Stadion" : "Rajko Mitic",
+    "Slika" : "../../slike/Klubovi\\5a8b546b25a75025804985a6.jpg",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b515025a75025804985a1")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b548d25a75025804985a7")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b54a025a75025804985a8")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b54db25a75025804985a9")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b558525a75025804985ae")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b55ff25a75025804985ba")
+        }
+    ]
+});
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b551025a75025804985aa"),
+    "Ime" : "Vojvodina",
+    "God_osn" : 1930,
+    "Grad" : "Novi Sad",
+    "Bodovi" : 0,
+    "Stadion" : "Karadjordje",
+    "Slika" : "../../slike/Klubovi\\5a8b551025a75025804985aa.png",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b515025a75025804985a1")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b553e25a75025804985ab")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b555725a75025804985ac")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b557825a75025804985ad")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b55d425a75025804985b5")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b55ff25a75025804985ba")
+        }
+    ]
+});
+
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b583f25a75025804985c3"),
+    "Ime" : "Real Madrid",
+    "God_osn" : 1908,
+    "Grad" : "Madrid",
+    "Bodovi" : 4,
+    "Stadion" : "Santiago Bernabeu",
+    "Slika" : "../../slike/Klubovi\\5a8b583f25a75025804985c3.jpg",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b568425a75025804985c2")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b585c25a75025804985c4")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b587125a75025804985c5")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b588c25a75025804985c6")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b598425a75025804985cf")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b599325a75025804985d1")
+        }
+    ]
+});
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b58a525a75025804985c7"),
+    "Ime" : "Barcelona",
+    "God_osn" : 1908,
+    "Grad" : "Barcelona",
+    "Bodovi" : 5,
+    "Stadion" : "Camp Nou",
+    "Slika" : "../../slike/Klubovi\\5a8b58a525a75025804985c7.png",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b568425a75025804985c2")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b58d025a75025804985c8")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b58e425a75025804985c9")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b58fd25a75025804985ca")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b598425a75025804985cf")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b598b25a75025804985d0")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b599e25a75025804985d2")
+        }
+    ]
+});
+
+db.klubovi.insert({
+    "_id" : ObjectId("5a8b591825a75025804985cb"),
+    "Ime" : "Atletico Madrid",
+    "God_osn" : 1908,
+    "Grad" : "Madrid",
+    "Bodovi" : 1,
+    "Stadion" : "Vicente Calderon",
+    "Slika" : "../../slike/Klubovi\\5a8b591825a75025804985cb.png",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b568425a75025804985c2")
+    },
+    "Igraci" : [ 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b594e25a75025804985cc")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b596625a75025804985cd")
+        }, 
+        {
+            "$ref" : "igraci",
+            "$id" : ObjectId("5a8b597b25a75025804985ce")
+        }
+    ],
+    "Utakmice" : [ 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b598b25a75025804985d0")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b599325a75025804985d1")
+        }, 
+        {
+            "$ref" : "utakmice",
+            "$id" : ObjectId("5a8b599e25a75025804985d2")
+        }
+    ]
+});
+
+
+
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4bea25a7501ec4ada514"),
+    "Ime" : "Romelu",
+    "Prezime" : "Lukaku",
+    "God_rodj" : 1993,
+    "Drzava" : "Belgija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4b3b25a7501ec4ada513")
+    },
+    "Broj_gol" : 2,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4bea25a7501ec4ada514.png"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4c1125a7501ec4ada515"),
+    "Ime" : "Nemanja",
+    "Prezime" : "Matic",
+    "God_rodj" : 1989,
+    "Drzava" : "Srbija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4b3b25a7501ec4ada513")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4c1125a7501ec4ada515.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4c3425a7501ec4ada516"),
+    "Ime" : "Juan",
+    "Prezime" : "Mata",
+    "God_rodj" : 1990,
+    "Drzava" : "Spanija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4b3b25a7501ec4ada513")
+    },
+    "Broj_gol" : 0,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4c3425a7501ec4ada516.png"
+});
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4ddb25a7500b449ba0d1"),
+    "Ime" : "Alvaro",
+    "Prezime" : "Morata",
+    "God_rodj" : 1992,
+    "Drzava" : "Spanija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4d5925a7500b449ba0d0")
+    },
+    "Broj_gol" : 2,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4ddb25a7500b449ba0d1.png"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4df425a7500b449ba0d2"),
+    "Ime" : "Eden",
+    "Prezime" : "Hazadr",
+    "God_rodj" : 1993,
+    "Drzava" : "Belgija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4d5925a7500b449ba0d0")
+    },
+    "Broj_gol" : 3,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4df425a7500b449ba0d2.png"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4e0a25a7500b449ba0d3"),
+    "Ime" : "David",
+    "Prezime" : "Luiz",
+    "God_rodj" : 1990,
+    "Drzava" : "Brazil",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4d5925a7500b449ba0d0")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4e0a25a7500b449ba0d3.png"
+});
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4ecb25a7500b449ba0d5"),
+    "Ime" : "James",
+    "Prezime" : "Milner",
+    "God_rodj" : 1986,
+    "Drzava" : "Engleska",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4e4425a7500b449ba0d4")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4ecb25a7500b449ba0d5.png"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4eeb25a7500b449ba0d6"),
+    "Ime" : "Roberto",
+    "Prezime" : "Firmino",
+    "God_rodj" : 1990,
+    "Drzava" : "Brazil",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4e4425a7500b449ba0d4")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4eeb25a7500b449ba0d6.png"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b4f0025a7500b449ba0d7"),
+    "Ime" : "Mohamed",
+    "Prezime" : "Salah",
+    "God_rodj" : 1991,
+    "Drzava" : "Egipat",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4e4425a7500b449ba0d4")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b4f0025a7500b449ba0d7.png"
+});
+
+
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b541625a75025804985a3"),
+    "Ime" : "Leandre",
+    "Prezime" : "Tawamba",
+    "God_rodj" : 1991,
+    "Drzava" : "Kamerun",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b53f625a75025804985a2")
+    },
+    "Broj_gol" : 2,
+    "Slika" : "../../slike/Fudbaleri\\5a8b541625a75025804985a3.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b543025a75025804985a4"),
+    "Ime" : "Marko",
+    "Prezime" : "Jankovic",
+    "God_rodj" : 1995,
+    "Drzava" : "Crna Gora",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b53f625a75025804985a2")
+    },
+    "Broj_gol" : 0,
+    "Slika" : "../../slike/Fudbaleri\\5a8b543025a75025804985a4.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b544e25a75025804985a5"),
+    "Ime" : "Dusan",
+    "Prezime" : "Jovanovic",
+    "God_rodj" : 1999,
+    "Drzava" : "Srbija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b53f625a75025804985a2")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b544e25a75025804985a5.jpg"
+});
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b548d25a75025804985a7"),
+    "Ime" : "Nemanja",
+    "Prezime" : "Radonjic",
+    "God_rodj" : 1996,
+    "Drzava" : "Srbija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b546b25a75025804985a6")
+    },
+    "Broj_gol" : 2,
+    "Slika" : "../../slike/Fudbaleri\\5a8b548d25a75025804985a7.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b54a025a75025804985a8"),
+    "Ime" : "Milan",
+    "Prezime" : "Borjan",
+    "God_rodj" : 1990,
+    "Drzava" : "Kanada",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b546b25a75025804985a6")
+    },
+    "Broj_gol" : 0,
+    "Slika" : "../../slike/Fudbaleri\\5a8b54a025a75025804985a8.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b54db25a75025804985a9"),
+    "Ime" : "Richmond",
+    "Prezime" : "Boakye",
+    "God_rodj" : 1990,
+    "Drzava" : "Gana",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b546b25a75025804985a6")
+    },
+    "Broj_gol" : 2,
+    "Slika" : "../../slike/Fudbaleri\\5a8b54db25a75025804985a9.jpg"
+});
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b553e25a75025804985ab"),
+    "Ime" : "Lazar",
+    "Prezime" : "Zlicic",
+    "God_rodj" : 1997,
+    "Drzava" : "Srbija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b551025a75025804985aa")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b553e25a75025804985ab.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b555725a75025804985ac"),
+    "Ime" : "Emil",
+    "Prezime" : "Rockov",
+    "God_rodj" : 1993,
+    "Drzava" : "Srbija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b551025a75025804985aa")
+    },
+    "Broj_gol" : 0,
+    "Slika" : "../../slike/Fudbaleri\\5a8b555725a75025804985ac.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b557825a75025804985ad"),
+    "Ime" : "Nikola",
+    "Prezime" : "Antic",
+    "God_rodj" : 1992,
+    "Drzava" : "Srbija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b551025a75025804985aa")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b557825a75025804985ad.jpg"
+});
+
+
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b585c25a75025804985c4"),
+    "Ime" : "Cristiano",
+    "Prezime" : "Ronaldo",
+    "God_rodj" : 1995,
+    "Drzava" : "Portugal",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b583f25a75025804985c3")
+    },
+    "Broj_gol" : 4,
+    "Slika" : "../../slike/Fudbaleri\\5a8b585c25a75025804985c4.png"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b587125a75025804985c5"),
+    "Ime" : "Marco",
+    "Prezime" : "Asensio",
+    "God_rodj" : 1996,
+    "Drzava" : "Spanija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b583f25a75025804985c3")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b587125a75025804985c5.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b588c25a75025804985c6"),
+    "Ime" : "Sergio",
+    "Prezime" : "Ramos",
+    "God_rodj" : 1986,
+    "Drzava" : "Spanija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b583f25a75025804985c3")
+    },
+    "Broj_gol" : 0,
+    "Slika" : "../../slike/Fudbaleri\\5a8b588c25a75025804985c6.png"
+});
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b58d025a75025804985c8"),
+    "Ime" : "Lionel",
+    "Prezime" : "Messi",
+    "God_rodj" : 1987,
+    "Drzava" : "Argentina",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b58a525a75025804985c7")
+    },
+    "Broj_gol" : 2,
+    "Slika" : "../../slike/Fudbaleri\\5a8b58d025a75025804985c8.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b58e425a75025804985c9"),
+    "Ime" : "Luis",
+    "Prezime" : "Suarez",
+    "God_rodj" : 1990,
+    "Drzava" : "Urugvaj",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b58a525a75025804985c7")
+    },
+    "Broj_gol" : 0,
+    "Slika" : "../../slike/Fudbaleri\\5a8b58e425a75025804985c9.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b58fd25a75025804985ca"),
+    "Ime" : "Andreas",
+    "Prezime" : "Iniesta",
+    "God_rodj" : 1983,
+    "Drzava" : "Spanija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b58a525a75025804985c7")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b58fd25a75025804985ca.jpg"
+});
+
+db.igraci.insert({
+    "_id" : ObjectId("5a8b594e25a75025804985cc"),
+    "Ime" : "Antoine",
+    "Prezime" : "Griezmann",
+    "God_rodj" : 1992,
+    "Drzava" : "Francuska",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b591825a75025804985cb")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b594e25a75025804985cc.png"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b596625a75025804985cd"),
+    "Ime" : "Saul",
+    "Prezime" : "Niguez",
+    "God_rodj" : 1991,
+    "Drzava" : "Spanija",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b591825a75025804985cb")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b596625a75025804985cd.jpg"
+});
+db.igraci.insert({
+    "_id" : ObjectId("5a8b597b25a75025804985ce"),
+    "Ime" : "Stefan",
+    "Prezime" : "Savic",
+    "God_rodj" : 1989,
+    "Drzava" : "Crna Gora",
+    "Klub" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b591825a75025804985cb")
+    },
+    "Broj_gol" : 1,
+    "Slika" : "../../slike/Fudbaleri\\5a8b597b25a75025804985ce.png"
+});
+
+
+
+
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b4fed25a750258049858a"),
+    "Datum" : ISODate("2018-02-01T22:29:49.000Z"),
+    "Rezultat" : "1:0",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b4a8b25a75028b0d781fc")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4b3b25a7501ec4ada513")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4d5925a7500b449ba0d0")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b4ff925a750258049858b")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b500425a750258049858c")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b500c25a750258049858d")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b501325a750258049858e")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b501c25a750258049858f")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b502e25a7502580498590"),
+    "Datum" : ISODate("2018-02-08T22:31:02.000Z"),
+    "Rezultat" : "3:3",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b4a8b25a75028b0d781fc")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4d5925a7500b449ba0d0")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4e4425a7500b449ba0d4")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b503a25a7502580498591")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b503f25a7502580498592")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b504e25a7502580498593")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b505525a7502580498594")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b505d25a7502580498595")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b506325a7502580498596")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b506a25a7502580498597")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b508225a7502580498599")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b509f25a750258049859a"),
+    "Datum" : ISODate("2018-02-19T22:32:52.999Z"),
+    "Rezultat" : "0:0",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b4a8b25a75028b0d781fc")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4b3b25a7501ec4ada513")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4e4425a7500b449ba0d4")
+    },
+    "Dogadjaji" : []
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b50b725a750258049859b"),
+    "Datum" : ISODate("2018-02-20T22:33:07.000Z"),
+    "Rezultat" : "1:1",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b4a8b25a75028b0d781fc")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4d5925a7500b449ba0d0")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b4b3b25a7501ec4ada513")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b50c325a750258049859c")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b50c925a750258049859d")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b50ce25a750258049859e")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b50d525a750258049859f")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b50de25a75025804985a0")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b558525a75025804985ae"),
+    "Datum" : ISODate("2018-02-20T22:53:48.000Z"),
+    "Rezultat" : "1:1",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b515025a75025804985a1")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b53f625a75025804985a2")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b546b25a75025804985a6")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b559d25a75025804985af")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55a325a75025804985b0")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55a825a75025804985b1")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55b825a75025804985b2")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55bf25a75025804985b3")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55c925a75025804985b4")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b55d425a75025804985b5"),
+    "Datum" : ISODate("2018-02-19T22:55:09.201Z"),
+    "Rezultat" : "2:0",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b515025a75025804985a1")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b53f625a75025804985a2")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b551025a75025804985aa")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55dd25a75025804985b6")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55e225a75025804985b7")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55ec25a75025804985b8")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b55f325a75025804985b9")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b55ff25a75025804985ba"),
+    "Datum" : ISODate("2018-02-19T22:55:50.071Z"),
+    "Rezultat" : "2:3",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b515025a75025804985a1")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b551025a75025804985aa")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b546b25a75025804985a6")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b560825a75025804985bb")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b560e25a75025804985bc")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b561325a75025804985bd")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b562025a75025804985be")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b562725a75025804985bf")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b562e25a75025804985c0")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b563625a75025804985c1")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b598425a75025804985cf"),
+    "Datum" : ISODate("2018-02-19T23:10:55.632Z"),
+    "Rezultat" : "2:2",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b568425a75025804985c2")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b583f25a75025804985c3")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b58a525a75025804985c7")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b5a0825a75025804985de")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b5a0e25a75025804985df")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b5a1625a75025804985e0")
+        }
+      
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b598b25a75025804985d0"),
+    "Datum" : ISODate("2018-02-19T23:11:02.225Z"),
+    "Rezultat" : "1:0",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b568425a75025804985c2")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b58a525a75025804985c7")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b591825a75025804985cb")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59f425a75025804985dc")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59fd25a75025804985dd")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b599325a75025804985d1"),
+    "Datum" : ISODate("2018-02-19T23:11:09.174Z"),
+    "Rezultat" : "3:4",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b568425a75025804985c2")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b591825a75025804985cb")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b583f25a75025804985c3")
+    },
+    "Dogadjaji" : [ 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59ab25a75025804985d3")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59b325a75025804985d4")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59bb25a75025804985d5")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59c125a75025804985d6")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59c825a75025804985d7")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59cf25a75025804985d8")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59d925a75025804985d9")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59e025a75025804985da")
+        }, 
+        {
+            "$ref" : "dogadjaji",
+            "$id" : ObjectId("5a8b59e825a75025804985db")
+        }
+    ]
+});
+db.utakmice.insert({
+    "_id" : ObjectId("5a8b599e25a75025804985d2"),
+    "Datum" : ISODate("2018-01-30T23:11:16.000Z"),
+    "Rezultat" : "0:0",
+    "Liga" : {
+        "$ref" : "lige",
+        "$id" : ObjectId("5a8b568425a75025804985c2")
+    },
+    "Klub1" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b591825a75025804985cb")
+    },
+    "Klub2" : {
+        "$ref" : "klubovi",
+        "$id" : ObjectId("5a8b58a525a75025804985c7")
+    },
+    "Dogadjaji" : [ ]
+});
+
+
+
+
+
+
+
+
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b4ff925a750258049858b"),
+    "Minut" : 20,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b4fed25a750258049858a")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4c1125a7501ec4ada515")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b500425a750258049858c"),
+    "Minut" : 35,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b4fed25a750258049858a")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4c3425a7501ec4ada516")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b500c25a750258049858d"),
+    "Minut" : 66,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b4fed25a750258049858a")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4c1125a7501ec4ada515")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b501325a750258049858e"),
+    "Minut" : 80,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b4fed25a750258049858a")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4bea25a7501ec4ada514")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b501c25a750258049858f"),
+    "Minut" : 50,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b4fed25a750258049858a")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4df425a7500b449ba0d2")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b503a25a7502580498591"),
+    "Minut" : 10,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4ddb25a7500b449ba0d1")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b503f25a7502580498592"),
+    "Minut" : 12,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4ecb25a7500b449ba0d5")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b504e25a7502580498593"),
+    "Minut" : 33,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4ecb25a7500b449ba0d5")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b505525a7502580498594"),
+    "Minut" : 20,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4df425a7500b449ba0d2")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b505d25a7502580498595"),
+    "Minut" : 60,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4ddb25a7500b449ba0d1")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b506325a7502580498596"),
+    "Minut" : 55,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4df425a7500b449ba0d2")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b506a25a7502580498597"),
+    "Minut" : 80,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4eeb25a7500b449ba0d6")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b507125a7502580498598"),
+    "Minut" : 30,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4e0a25a7500b449ba0d3")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b508225a7502580498599"),
+    "Minut" : 70,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b502e25a7502580498590")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4f0025a7500b449ba0d7")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b50c325a750258049859c"),
+    "Minut" : 15,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b50b725a750258049859b")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4ddb25a7500b449ba0d1")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b50c925a750258049859d"),
+    "Minut" : 50,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b50b725a750258049859b")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4df425a7500b449ba0d2")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b50ce25a750258049859e"),
+    "Minut" : 60,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b50b725a750258049859b")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4bea25a7501ec4ada514")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b50d525a750258049859f"),
+    "Minut" : 50,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b50b725a750258049859b")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4df425a7500b449ba0d2")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b50de25a75025804985a0"),
+    "Minut" : 45,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b50b725a750258049859b")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b4e0a25a7500b449ba0d3")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b559d25a75025804985af"),
+    "Minut" : 10,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b558525a75025804985ae")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b541625a75025804985a3")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55a325a75025804985b0"),
+    "Minut" : 50,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b558525a75025804985ae")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b544e25a75025804985a5")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55a825a75025804985b1"),
+    "Minut" : 80,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b558525a75025804985ae")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b541625a75025804985a3")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55b825a75025804985b2"),
+    "Minut" : 60,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b558525a75025804985ae")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b544e25a75025804985a5")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55bf25a75025804985b3"),
+    "Minut" : 50,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b558525a75025804985ae")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b548d25a75025804985a7")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55c925a75025804985b4"),
+    "Minut" : 5,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b558525a75025804985ae")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b54db25a75025804985a9")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55dd25a75025804985b6"),
+    "Minut" : 10,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55d425a75025804985b5")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b541625a75025804985a3")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55e225a75025804985b7"),
+    "Minut" : 25,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55d425a75025804985b5")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b544e25a75025804985a5")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55ec25a75025804985b8"),
+    "Minut" : 60,
+    "Tip" : "Crveni Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55d425a75025804985b5")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b557825a75025804985ad")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b55f325a75025804985b9"),
+    "Minut" : 80,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55d425a75025804985b5")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b543025a75025804985a4")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b560825a75025804985bb"),
+    "Minut" : 50,
+    "Tip" : "Autogol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55ff25a75025804985ba")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b557825a75025804985ad")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b560e25a75025804985bc"),
+    "Minut" : 20,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55ff25a75025804985ba")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b555725a75025804985ac")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b561325a75025804985bd"),
+    "Minut" : 58,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55ff25a75025804985ba")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b553e25a75025804985ab")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b562025a75025804985be"),
+    "Minut" : 80,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55ff25a75025804985ba")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b557825a75025804985ad")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b562725a75025804985bf"),
+    "Minut" : 20,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55ff25a75025804985ba")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b548d25a75025804985a7")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b562e25a75025804985c0"),
+    "Minut" : 65,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55ff25a75025804985ba")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b54db25a75025804985a9")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b563625a75025804985c1"),
+    "Minut" : 50,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b55ff25a75025804985ba")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b54db25a75025804985a9")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59ab25a75025804985d3"),
+    "Minut" : 15,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b585c25a75025804985c4")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59b325a75025804985d4"),
+    "Minut" : 50,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b585c25a75025804985c4")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59bb25a75025804985d5"),
+    "Minut" : 80,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b585c25a75025804985c4")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59c125a75025804985d6"),
+    "Minut" : 50,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b587125a75025804985c5")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59c825a75025804985d7"),
+    "Minut" : 20,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b596625a75025804985cd")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59cf25a75025804985d8"),
+    "Minut" : 40,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b597b25a75025804985ce")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59d925a75025804985d9"),
+    "Minut" : 52,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b594e25a75025804985cc")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59e025a75025804985da"),
+    "Minut" : 25,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b597b25a75025804985ce")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59e825a75025804985db"),
+    "Minut" : 56,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b599325a75025804985d1")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b588c25a75025804985c6")
+    }
+});
+
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59f425a75025804985dc"),
+    "Minut" : 50,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b598b25a75025804985d0")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b58d025a75025804985c8")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b59fd25a75025804985dd"),
+    "Minut" : 65,
+    "Tip" : "Zuti Karton",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b598b25a75025804985d0")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b594e25a75025804985cc")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b5a0825a75025804985de"),
+    "Minut" : 45,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b598425a75025804985cf")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b585c25a75025804985c4")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b5a0e25a75025804985df"),
+    "Minut" : 50,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b598425a75025804985cf")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b58fd25a75025804985ca")
+    }
+});
+db.dogadjaji.insert({
+    "_id" : ObjectId("5a8b5a1625a75025804985e0"),
+    "Minut" : 80,
+    "Tip" : "Gol",
+    "Utakmica" : {
+        "$ref" : "utakmice",
+        "$id" : ObjectId("5a8b598425a75025804985cf")
+    },
+    "Igrac" : {
+        "$ref" : "igraci",
+        "$id" : ObjectId("5a8b58d025a75025804985c8")
+    }
+});
