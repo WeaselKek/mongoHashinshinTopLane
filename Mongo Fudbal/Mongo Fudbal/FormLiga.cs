@@ -26,6 +26,8 @@ namespace Mongo_Fudbal
 
         private void FormLiga_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina4.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             btnDelete.BackgroundImage = Image.FromFile("../../icons/delete.png");
             btnDelete.BackgroundImageLayout = ImageLayout.Stretch;
             btnDeleteU.BackgroundImage = Image.FromFile("../../icons/delete.png");

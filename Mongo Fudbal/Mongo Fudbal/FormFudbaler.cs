@@ -58,5 +58,10 @@ namespace Mongo_Fudbal
             //igraciColl.Save(F);
             //this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

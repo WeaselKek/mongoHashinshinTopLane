@@ -52,6 +52,8 @@ namespace Mongo_Fudbal
 
         private void FormUtakmica_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina4.png");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             btnDelete.BackgroundImage = Image.FromFile("../../icons/delete.png");
             btnDelete.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -101,7 +103,7 @@ namespace Mongo_Fudbal
 
             utakmiceColl.Save(U);
 
-            dogadjajiColl.Remove(Query.EQ("_iq", d.Id));
+            dogadjajiColl.Remove(Query.EQ("_id", d.Id));
 
             UcitajDGVDogadjaji();
 

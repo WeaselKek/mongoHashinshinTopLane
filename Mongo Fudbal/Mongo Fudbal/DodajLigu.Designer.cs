@@ -38,30 +38,30 @@
             // txtNaziv
             // 
             this.txtNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNaziv.Location = new System.Drawing.Point(65, 72);
-            this.txtNaziv.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNaziv.Location = new System.Drawing.Point(133, 80);
+            this.txtNaziv.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNaziv.Name = "txtNaziv";
-            this.txtNaziv.Size = new System.Drawing.Size(185, 24);
+            this.txtNaziv.Size = new System.Drawing.Size(245, 28);
             this.txtNaziv.TabIndex = 0;
             // 
             // txtDrzava
             // 
             this.txtDrzava.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDrzava.Location = new System.Drawing.Point(65, 146);
-            this.txtDrzava.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDrzava.Location = new System.Drawing.Point(133, 171);
+            this.txtDrzava.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDrzava.Name = "txtDrzava";
-            this.txtDrzava.Size = new System.Drawing.Size(185, 24);
+            this.txtDrzava.Size = new System.Drawing.Size(245, 28);
             this.txtDrzava.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(125, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(211, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 18);
+            this.label1.Size = new System.Drawing.Size(91, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "Naziv lige";
             // 
@@ -71,22 +71,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(133, 124);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(223, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 18);
+            this.label2.Size = new System.Drawing.Size(67, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "Drzava";
             // 
             // btnTrue
             // 
             this.btnTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrue.Location = new System.Drawing.Point(120, 201);
-            this.btnTrue.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTrue.Location = new System.Drawing.Point(203, 247);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTrue.Name = "btnTrue";
-            this.btnTrue.Size = new System.Drawing.Size(74, 32);
+            this.btnTrue.Size = new System.Drawing.Size(99, 39);
             this.btnTrue.TabIndex = 4;
             this.btnTrue.Text = "Dodaj";
             this.btnTrue.UseVisualStyleBackColor = true;
@@ -94,16 +94,16 @@
             // 
             // DodajLigu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
-            this.ClientSize = new System.Drawing.Size(317, 252);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(510, 319);
             this.Controls.Add(this.btnTrue);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDrzava);
             this.Controls.Add(this.txtNaziv);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DodajLigu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liga";

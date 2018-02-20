@@ -44,55 +44,60 @@
             // 
             // lblDomacin
             // 
-            this.lblDomacin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDomacin.Location = new System.Drawing.Point(8, 59);
-            this.lblDomacin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDomacin.BackColor = System.Drawing.Color.Transparent;
+            this.lblDomacin.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDomacin.ForeColor = System.Drawing.Color.White;
+            this.lblDomacin.Location = new System.Drawing.Point(12, 74);
             this.lblDomacin.Name = "lblDomacin";
-            this.lblDomacin.Size = new System.Drawing.Size(216, 27);
+            this.lblDomacin.Size = new System.Drawing.Size(312, 33);
             this.lblDomacin.TabIndex = 0;
             this.lblDomacin.Text = "lblDomacin";
             this.lblDomacin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblGost
             // 
-            this.lblGost.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGost.Location = new System.Drawing.Point(316, 59);
-            this.lblGost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGost.BackColor = System.Drawing.Color.Transparent;
+            this.lblGost.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGost.ForeColor = System.Drawing.Color.White;
+            this.lblGost.Location = new System.Drawing.Point(517, 74);
             this.lblGost.Name = "lblGost";
-            this.lblGost.Size = new System.Drawing.Size(221, 26);
+            this.lblGost.Size = new System.Drawing.Size(295, 32);
             this.lblGost.TabIndex = 1;
             this.lblGost.Text = "lblGost";
             this.lblGost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblRezultat
             // 
-            this.lblRezultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRezultat.Location = new System.Drawing.Point(229, 57);
-            this.lblRezultat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRezultat.BackColor = System.Drawing.Color.Transparent;
+            this.lblRezultat.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRezultat.ForeColor = System.Drawing.Color.White;
+            this.lblRezultat.Location = new System.Drawing.Point(359, 68);
             this.lblRezultat.Name = "lblRezultat";
-            this.lblRezultat.Size = new System.Drawing.Size(83, 30);
+            this.lblRezultat.Size = new System.Drawing.Size(111, 37);
             this.lblRezultat.TabIndex = 2;
             this.lblRezultat.Text = "lblRezultat";
             this.lblRezultat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDatum
             // 
+            this.lblDatum.BackColor = System.Drawing.Color.Transparent;
             this.lblDatum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatum.Location = new System.Drawing.Point(9, 20);
-            this.lblDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDatum.ForeColor = System.Drawing.Color.White;
+            this.lblDatum.Location = new System.Drawing.Point(12, 25);
             this.lblDatum.Name = "lblDatum";
-            this.lblDatum.Size = new System.Drawing.Size(529, 19);
+            this.lblDatum.Size = new System.Drawing.Size(800, 23);
             this.lblDatum.TabIndex = 3;
             this.lblDatum.Text = "lblDatum";
             this.lblDatum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblStadion
             // 
+            this.lblStadion.BackColor = System.Drawing.Color.Transparent;
             this.lblStadion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStadion.Location = new System.Drawing.Point(9, 106);
-            this.lblStadion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblStadion.ForeColor = System.Drawing.Color.White;
+            this.lblStadion.Location = new System.Drawing.Point(12, 134);
             this.lblStadion.Name = "lblStadion";
-            this.lblStadion.Size = new System.Drawing.Size(529, 19);
+            this.lblStadion.Size = new System.Drawing.Size(800, 23);
             this.lblStadion.TabIndex = 4;
             this.lblStadion.Text = "lblStadion";
             this.lblStadion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,11 +105,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 162);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(108, 199);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
+            this.label1.Size = new System.Drawing.Size(172, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Dogadjaji na mecu:";
             // 
@@ -113,10 +119,10 @@
             this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(50, 365);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(112, 492);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 37);
+            this.button1.Size = new System.Drawing.Size(175, 46);
             this.button1.TabIndex = 7;
             this.button1.Text = "Dodaj dogadjaj";
             this.button1.UseVisualStyleBackColor = false;
@@ -129,10 +135,10 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(192, 365);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(293, 492);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(34, 37);
+            this.btnDelete.Size = new System.Drawing.Size(45, 46);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -157,8 +163,8 @@
             this.dataGridViewDogadjaji.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDogadjaji.ColumnHeadersVisible = false;
             this.dataGridViewDogadjaji.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGridViewDogadjaji.Location = new System.Drawing.Point(50, 184);
-            this.dataGridViewDogadjaji.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewDogadjaji.Location = new System.Drawing.Point(112, 225);
+            this.dataGridViewDogadjaji.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewDogadjaji.MultiSelect = false;
             this.dataGridViewDogadjaji.Name = "dataGridViewDogadjaji";
             this.dataGridViewDogadjaji.ReadOnly = true;
@@ -167,14 +173,15 @@
             this.dataGridViewDogadjaji.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dataGridViewDogadjaji.RowTemplate.Height = 28;
             this.dataGridViewDogadjaji.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewDogadjaji.Size = new System.Drawing.Size(449, 176);
+            this.dataGridViewDogadjaji.Size = new System.Drawing.Size(599, 263);
             this.dataGridViewDogadjaji.TabIndex = 9;
             // 
             // FormUtakmica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 430);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(824, 587);
             this.Controls.Add(this.dataGridViewDogadjaji);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.button1);
@@ -184,7 +191,7 @@
             this.Controls.Add(this.lblRezultat);
             this.Controls.Add(this.lblGost);
             this.Controls.Add(this.lblDomacin);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormUtakmica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Utakmica";

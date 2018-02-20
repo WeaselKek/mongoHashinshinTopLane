@@ -93,6 +93,9 @@ namespace Mongo_Fudbal
 
         private void DodajLigu_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina4.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
             if (UpdateItem != null)
             {
                 btnTrue.Text = "Azuriraj";

@@ -52,14 +52,20 @@ namespace Mongo_Fudbal
 
         private void FormKlub_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina4.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
+            btnUpdate.BackgroundImage = Image.FromFile("../../icons/edit.png");
+            btnUpdate.BackgroundImageLayout = ImageLayout.Stretch;
+
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);
             var db = server.GetDatabase("fudbal");
 
             this.Text = K.Ime;
             lblNaziv.Text = K.Ime;
-            lblGrad.Text = "Grad: " + K.Grad;
-            lblGodina.Text = "Godina osnivanja: " + K.God_osn;
+            lblGrad.Text = K.Grad;
+            lblGodina.Text = K.God_osn.ToString();
 
             if (!String.IsNullOrEmpty(K.Slika))
             {
@@ -68,7 +74,7 @@ namespace Mongo_Fudbal
 
             Liga l = db.FetchDBRefAs<Liga>(K.Liga);
 
-            lblLiga.Text = "Liga: " + l.Ime + " (" + l.Drzava + ")";
+            lblLiga.Text = l.Ime + " (" + l.Drzava + ")";
 
             UcitajDGVIgraci();
 

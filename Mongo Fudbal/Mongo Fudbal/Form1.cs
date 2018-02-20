@@ -67,7 +67,7 @@ namespace Mongo_Fudbal
             btnUpdate.BackgroundImageLayout = ImageLayout.Stretch;
             btnDelete.BackgroundImage = Image.FromFile("../../icons/delete.png");
             btnDelete.BackgroundImageLayout = ImageLayout.Stretch;
-            this.BackgroundImage = Image.FromFile("../../slike/pozadina1.jpg");
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina.jpg");
             this.BackgroundImageLayout = ImageLayout.Stretch;
 
         }

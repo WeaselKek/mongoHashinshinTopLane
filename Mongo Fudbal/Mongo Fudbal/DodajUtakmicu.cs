@@ -100,6 +100,9 @@ namespace Mongo_Fudbal
 
         private void DodajUtakmicu_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina4.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
 
             var connectionString = "mongodb://localhost/?safe=true";
             var server = MongoServer.Create(connectionString);

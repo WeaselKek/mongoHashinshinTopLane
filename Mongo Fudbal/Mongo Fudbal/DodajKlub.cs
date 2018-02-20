@@ -98,6 +98,8 @@ namespace Mongo_Fudbal
 
         private void DodajKlub_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina5.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             openFileDialog1.FileName = "";
         }
 

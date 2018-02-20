@@ -108,7 +108,10 @@ namespace Mongo_Fudbal
             fu.Prezime = txbPrez.Text;
             fu.Drzava = txbDrzava.Text;
             fu.God_rodj = Int32.Parse(txbGod.Text);
-            fu.Slika = upload_image(fu);
+            if (fu.Slika != lblSlika.Text)
+            {
+                fu.Slika = upload_image(fu);
+            }
 
             collection.Save(fu);
             this.Close();
@@ -129,6 +132,9 @@ namespace Mongo_Fudbal
 
         private void DodajFudbalera_Load(object sender, EventArgs e)
         {
+            this.BackgroundImage = Image.FromFile("../../slike/pozadina2.jpg");
+            this.BackgroundImageLayout = ImageLayout.Stretch;
+
             if (UpdateItem != null)
             {
                 btnTrue.Text = "Azuriraj";

@@ -45,34 +45,38 @@
             // txbIme
             // 
             this.txbIme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbIme.Location = new System.Drawing.Point(42, 69);
+            this.txbIme.Location = new System.Drawing.Point(95, 65);
+            this.txbIme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbIme.Name = "txbIme";
-            this.txbIme.Size = new System.Drawing.Size(369, 24);
+            this.txbIme.Size = new System.Drawing.Size(491, 28);
             this.txbIme.TabIndex = 0;
             // 
             // txbPrez
             // 
             this.txbPrez.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPrez.Location = new System.Drawing.Point(42, 128);
+            this.txbPrez.Location = new System.Drawing.Point(95, 138);
+            this.txbPrez.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbPrez.Name = "txbPrez";
-            this.txbPrez.Size = new System.Drawing.Size(368, 24);
+            this.txbPrez.Size = new System.Drawing.Size(491, 28);
             this.txbPrez.TabIndex = 1;
             // 
             // txbGod
             // 
             this.txbGod.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbGod.Location = new System.Drawing.Point(42, 194);
+            this.txbGod.Location = new System.Drawing.Point(95, 219);
+            this.txbGod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbGod.Name = "txbGod";
-            this.txbGod.Size = new System.Drawing.Size(76, 24);
+            this.txbGod.Size = new System.Drawing.Size(100, 28);
             this.txbGod.TabIndex = 2;
             this.txbGod.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbGod_KeyPress);
             // 
             // btnTrue
             // 
             this.btnTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrue.Location = new System.Drawing.Point(151, 316);
+            this.btnTrue.Location = new System.Drawing.Point(234, 382);
+            this.btnTrue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTrue.Name = "btnTrue";
-            this.btnTrue.Size = new System.Drawing.Size(136, 37);
+            this.btnTrue.Size = new System.Drawing.Size(181, 46);
             this.btnTrue.TabIndex = 3;
             this.btnTrue.Text = "Dodaj";
             this.btnTrue.UseVisualStyleBackColor = true;
@@ -81,57 +85,71 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 46);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(91, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 18);
+            this.label1.Size = new System.Drawing.Size(41, 24);
             this.label1.TabIndex = 5;
             this.label1.Text = "Ime";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 105);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(91, 109);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 18);
+            this.label2.Size = new System.Drawing.Size(79, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Prezime";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 171);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(91, 190);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 18);
+            this.label3.Size = new System.Drawing.Size(144, 24);
             this.label3.TabIndex = 7;
             this.label3.Text = "Godina rodjenja";
             // 
             // txbDrzava
             // 
             this.txbDrzava.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbDrzava.Location = new System.Drawing.Point(235, 194);
+            this.txbDrzava.Location = new System.Drawing.Point(352, 219);
+            this.txbDrzava.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbDrzava.Name = "txbDrzava";
-            this.txbDrzava.Size = new System.Drawing.Size(175, 24);
+            this.txbDrzava.Size = new System.Drawing.Size(234, 28);
             this.txbDrzava.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(232, 171);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(348, 190);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 18);
+            this.label5.Size = new System.Drawing.Size(67, 24);
             this.label5.TabIndex = 11;
             this.label5.Text = "Drzava";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(42, 243);
+            this.button1.Location = new System.Drawing.Point(95, 306);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 28);
+            this.button1.Size = new System.Drawing.Size(165, 34);
             this.button1.TabIndex = 12;
             this.button1.Text = "Izaberi sliku";
             this.button1.UseVisualStyleBackColor = true;
@@ -139,10 +157,13 @@
             // 
             // lblSlika
             // 
+            this.lblSlika.BackColor = System.Drawing.Color.Transparent;
             this.lblSlika.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSlika.Location = new System.Drawing.Point(172, 249);
+            this.lblSlika.ForeColor = System.Drawing.Color.White;
+            this.lblSlika.Location = new System.Drawing.Point(268, 314);
+            this.lblSlika.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSlika.Name = "lblSlika";
-            this.lblSlika.Size = new System.Drawing.Size(227, 20);
+            this.lblSlika.Size = new System.Drawing.Size(318, 25);
             this.lblSlika.TabIndex = 13;
             this.lblSlika.Text = "Nije izbrana slika";
             // 
@@ -152,9 +173,10 @@
             // 
             // DodajFudbalera
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(470, 415);
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ClientSize = new System.Drawing.Size(678, 461);
             this.Controls.Add(this.lblSlika);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
@@ -166,6 +188,7 @@
             this.Controls.Add(this.txbGod);
             this.Controls.Add(this.txbPrez);
             this.Controls.Add(this.txbIme);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DodajFudbalera";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fudbaler";
